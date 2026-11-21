@@ -4,7 +4,7 @@
   "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 4,
+  "version": 5,
   "converged": false,
   "availablePool": [
     "melee",
@@ -171,19 +171,57 @@
     },
     "X616-TETD": {
       "slotCode": "X616-TETD",
-      "status": "pending",
-      "locked": false,
-      "civilIdentity": null,
-      "answers": null,
-      "selectedWordIds": [],
-      "selectedWordLabels": [],
-      "scores": null,
-      "ranking": null,
-      "matchedPairs": [],
+      "status": "submitted",
+      "locked": true,
+      "civilIdentity": {
+        "playerName": "MA",
+        "civilName": "A",
+        "age": "A definir",
+        "occupation": "A definir",
+        "visualAppearance": "A definir",
+        "prePowerHistory": "A definir"
+      },
+      "answers": {
+        "q1": "q1_melee",
+        "q2": "q2_logic",
+        "q3": "q3_vigilance"
+      },
+      "selectedWordIds": [
+        "w_instinto",
+        "w_segredo",
+        "w_nevoa",
+        "w_fuga",
+        "w_pressagio"
+      ],
+      "selectedWordLabels": [
+        "Instinto",
+        "Segredo",
+        "Névoa",
+        "Fuga",
+        "Presságio"
+      ],
+      "scores": {
+        "melee": 2,
+        "agility": 1,
+        "ego": 3,
+        "logic": 2,
+        "vigilance": 6
+      },
+      "ranking": [
+        "vigilance",
+        "ego",
+        "melee",
+        "logic",
+        "agility"
+      ],
+      "matchedPairs": [
+        "ego",
+        "vigilance"
+      ],
       "assignedArchetypeId": null,
       "assignedAffinityScore": null,
       "isUnexpectedAwakening": false,
-      "submittedAt": null
+      "submittedAt": "2026-11-21T23:07:50.755Z"
     },
     "X616-YN9E": {
       "slotCode": "X616-YN9E",
@@ -222,8 +260,13 @@
       "at": "2026-11-21T23:07:31.474Z",
       "event": "SLOT_SUBMITTED_BATCH",
       "detail": "Slot X616-FZXK (MA) submetido e travado. Aguardando convergência."
+    },
+    {
+      "at": "2026-11-21T23:07:50.755Z",
+      "event": "SLOT_SUBMITTED_BATCH",
+      "detail": "Slot X616-TETD (MA) submetido e travado. Aguardando convergência."
     }
   ],
   "createdAt": "2026-11-21T21:00:01.384Z",
-  "updatedAt": "2026-11-21T23:07:31.474Z"
+  "updatedAt": "2026-11-21T23:07:50.755Z"
 }
