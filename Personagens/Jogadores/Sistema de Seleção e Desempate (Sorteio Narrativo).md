@@ -31,26 +31,26 @@ Este protocolo define **como atribuir as 5 fichas mecânicas** aos personagens c
 
 ## Parte A — Bloco para os Jogadores *(Sem Spoilers)*
 
-### 1. Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?
-* **A)** Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente.
-* **B)** Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão.
-* **C)** Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação.
-* **D)** Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta.
-* **E)** Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente.
+### 1. Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?
+* **A)** Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco.
+* **B)** Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão.
+* **C)** Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele.
+* **D)** Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar.
+* **E)** Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar.
 
-### 2. O que mais marcou a história passada do seu personagem até hoje?
-* **A)** Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física.
-* **B)** Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar.
-* **C)** Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis.
-* **D)** Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar.
-* **E)** Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos.
+### 2. Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?
+* **A)** Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar.
+* **B)** Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada.
+* **C)** Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa.
+* **D)** Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar.
+* **E)** Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar.
 
-### 3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?
-* **A)** O escudo da linha de frente que não recua.
-* **B)** O especialista ágil que resolve alvos difíceis sem se expor.
-* **C)** O infiltrador ou distraidor que controla o que os outros percebem.
-* **D)** O estrategista que monta o plano e protege os companheiros.
-* **E)** O batedor/sentinela que percebe ameaças escondidas antes de todo mundo.
+### 3. Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?
+* **A)** Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda.
+* **B)** Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal.
+* **C)** Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar.
+* **D)** Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam.
+* **E)** Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro.
 
 ### 4. Sincronização de Palavras — Escolha **5 palavras EM ORDEM (`1ª` a `5ª`)**:
 1. `Impacto` | 2. `Precisão` | 3. `Névoa` | 4. `Sonho` | 5. `Instinto` | 6. `Resistência` | 7. `Fuga` | 8. `Segredo` | 9. `Estratégia` | 10. `Presságio` | 11. `Firmeza` | 12. `Reflexo` | 13. `Sussurro` | 14. `Controle` | 15. `Alerta`

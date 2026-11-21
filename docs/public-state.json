@@ -2,9 +2,9 @@
   "sessionId": "f78894d8-f98d-4a7e-83ee-a8c9d6954315",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 3,
+  "version": 4,
   "converged": false,
-  "updatedAt": "2026-11-21T23:26:00.177Z",
+  "updatedAt": "2026-11-21T23:31:49.901Z",
   "masterCodeHash": "80c520975399326c81ea39c88107e73cd3d11707f993c4121e241c0d98913e0b",
   "summary": {
     "totalSlots": 5,
@@ -87,79 +87,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
             "options": [
               {
                 "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
               },
               {
                 "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
               },
               {
                 "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
               },
               {
                 "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
               },
               {
                 "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
+            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
             "options": [
               {
                 "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
               },
               {
                 "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
               },
               {
                 "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
               },
               {
                 "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
             "options": [
               {
                 "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
+                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
               },
               {
                 "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
+                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
               },
               {
                 "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
               },
               {
                 "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
+                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
               },
               {
                 "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
+                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
               }
             ]
           }
@@ -245,79 +245,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
             "options": [
               {
                 "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
               },
               {
                 "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
               },
               {
                 "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
               },
               {
                 "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
+            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
             "options": [
               {
                 "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
               },
               {
                 "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
               },
               {
                 "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
               },
               {
                 "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
             "options": [
               {
                 "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
+                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
               },
               {
                 "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
+                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
               },
               {
                 "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
+                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
               },
               {
                 "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
+                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
               },
               {
                 "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
               }
             ]
           }
@@ -403,79 +403,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
             "options": [
               {
                 "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
               },
               {
                 "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
               },
               {
                 "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
               },
               {
                 "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
+            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
             "options": [
               {
                 "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
               },
               {
                 "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
               },
               {
                 "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
             "options": [
               {
                 "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
               },
               {
                 "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
+                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
               },
               {
                 "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
+                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
               },
               {
                 "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
+                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
               },
               {
                 "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
+                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
               }
             ]
           }
@@ -561,79 +561,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
             "options": [
               {
                 "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
               },
               {
                 "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
               },
               {
                 "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
               },
               {
                 "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
+            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
             "options": [
               {
                 "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
               },
               {
                 "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
               },
               {
                 "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
               },
               {
                 "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
             "options": [
               {
                 "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
               },
               {
                 "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
+                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
               },
               {
                 "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
+                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
               },
               {
                 "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
+                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
               },
               {
                 "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
+                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
               }
             ]
           }
@@ -719,79 +719,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
             "options": [
               {
                 "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
               },
               {
                 "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
               },
               {
                 "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
               },
               {
                 "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
+            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
             "options": [
               {
                 "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
               },
               {
                 "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
               },
               {
                 "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
             "options": [
               {
                 "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
+                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
               },
               {
                 "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
+                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
               },
               {
                 "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
               },
               {
                 "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
+                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
               },
               {
                 "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
+                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
               }
             ]
           }

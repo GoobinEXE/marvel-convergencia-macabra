@@ -79,9 +79,16 @@ jobs:
           const civilOccupation = extract("Ocupação Civil");
           const visualAppearance = extract("Aparência Visual (Pessoa Normal)");
           const prePowerHistory = extract("Histórico Pré-Poderes");
-          const q1 = extract("1. Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?").slice(0, 1);
-          const q2 = extract("2. O que mais marcou a história passada do seu personagem até hoje?").slice(0, 1);
+          const q1 = (
+            extract("1. Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?") ||
+            extract("1. Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?")
+          ).slice(0, 1);
+          const q2 = (
+            extract("2. Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?") ||
+            extract("2. O que mais marcou a história passada do seu personagem até hoje?")
+          ).slice(0, 1);
           const q3 = (
+            extract("3. Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?") ||
             extract("3. Em um grupo tentando sobreviver a uma crise, qual é o primeiro papel que combina mais com a personalidade dele?") ||
             extract("3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?")
           ).slice(0, 1);

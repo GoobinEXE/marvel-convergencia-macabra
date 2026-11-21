@@ -27,13 +27,13 @@ export const SCORING_RULES = {
 export const QUESTIONS = [
   {
     id: "q1",
-    prompt: "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
+    prompt: "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
     weights: { primary: 2.3500, secondary: 0.8500, tertiary: 0.3125 },
     options: [
       {
         id: "q1_melee",
         letter: "A",
-        text: "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente.",
+        text: "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco.",
         primary: "melee",
         secondary: "vigilance",
         tertiary: "ego",
@@ -41,7 +41,7 @@ export const QUESTIONS = [
       {
         id: "q1_agility",
         letter: "B",
-        text: "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão.",
+        text: "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão.",
         primary: "agility",
         secondary: "logic",
         tertiary: "vigilance",
@@ -49,7 +49,7 @@ export const QUESTIONS = [
       {
         id: "q1_ego",
         letter: "C",
-        text: "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação.",
+        text: "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele.",
         primary: "ego",
         secondary: "agility",
         tertiary: "logic",
@@ -57,7 +57,7 @@ export const QUESTIONS = [
       {
         id: "q1_logic",
         letter: "D",
-        text: "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta.",
+        text: "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar.",
         primary: "logic",
         secondary: "ego",
         tertiary: "agility",
@@ -65,7 +65,7 @@ export const QUESTIONS = [
       {
         id: "q1_vigilance",
         letter: "E",
-        text: "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente.",
+        text: "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar.",
         primary: "vigilance",
         secondary: "melee",
         tertiary: "agility",
@@ -74,13 +74,13 @@ export const QUESTIONS = [
   },
   {
     id: "q2",
-    prompt: "O que mais marcou a história passada do seu personagem até hoje?",
+    prompt: "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
     weights: { primary: 2.1500, secondary: 0.6500, tertiary: 0.1875 },
     options: [
       {
         id: "q2_melee",
         letter: "A",
-        text: "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física.",
+        text: "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar.",
         primary: "melee",
         secondary: "vigilance",
         tertiary: "agility",
@@ -88,7 +88,7 @@ export const QUESTIONS = [
       {
         id: "q2_agility",
         letter: "B",
-        text: "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar.",
+        text: "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada.",
         primary: "agility",
         secondary: "vigilance",
         tertiary: "ego",
@@ -96,7 +96,7 @@ export const QUESTIONS = [
       {
         id: "q2_ego",
         letter: "C",
-        text: "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis.",
+        text: "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa.",
         primary: "ego",
         secondary: "logic",
         tertiary: "vigilance",
@@ -104,7 +104,7 @@ export const QUESTIONS = [
       {
         id: "q2_logic",
         letter: "D",
-        text: "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar.",
+        text: "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar.",
         primary: "logic",
         secondary: "ego",
         tertiary: "melee",
@@ -112,7 +112,7 @@ export const QUESTIONS = [
       {
         id: "q2_vigilance",
         letter: "E",
-        text: "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos.",
+        text: "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar.",
         primary: "vigilance",
         secondary: "logic",
         tertiary: "melee",
@@ -121,13 +121,13 @@ export const QUESTIONS = [
   },
   {
     id: "q3",
-    prompt: "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
+    prompt: "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
     weights: { primary: 1.9500, secondary: 0.4500, tertiary: 0.1250 },
     options: [
       {
         id: "q3_melee",
         letter: "A",
-        text: "O escudo da linha de frente que não recua.",
+        text: "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda.",
         primary: "melee",
         secondary: "ego",
         tertiary: "vigilance",
@@ -135,7 +135,7 @@ export const QUESTIONS = [
       {
         id: "q3_agility",
         letter: "B",
-        text: "O especialista ágil que resolve alvos difíceis sem se expor.",
+        text: "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal.",
         primary: "agility",
         secondary: "melee",
         tertiary: "logic",
@@ -143,7 +143,7 @@ export const QUESTIONS = [
       {
         id: "q3_ego",
         letter: "C",
-        text: "O infiltrador ou distraidor que controla o que os outros percebem.",
+        text: "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar.",
         primary: "ego",
         secondary: "agility",
         tertiary: "vigilance",
@@ -151,7 +151,7 @@ export const QUESTIONS = [
       {
         id: "q3_logic",
         letter: "D",
-        text: "O estrategista que monta o plano e protege os companheiros.",
+        text: "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam.",
         primary: "logic",
         secondary: "vigilance",
         tertiary: "ego",
@@ -159,7 +159,7 @@ export const QUESTIONS = [
       {
         id: "q3_vigilance",
         letter: "E",
-        text: "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo.",
+        text: "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro.",
         primary: "vigilance",
         secondary: "agility",
         tertiary: "logic",

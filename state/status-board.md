@@ -1,11 +1,11 @@
 # Painel de Controle — Despertar de Poderes (Convergência Macabra)
 
 * **Sessão:** `f78894d8-f98d-4a7e-83ee-a8c9d6954315`
-* **Modo:** `batch` | **Convergência Concluída:** `NÃO` | **Versão:** `v3`
+* **Modo:** `batch` | **Convergência Concluída:** `NÃO` | **Versão:** `v4`
 * **Progresso:** **0/5** responderam (**5** pendentes) | **Fichas livres no pool:** 5
 * **Sistema de Pontuação:** Determinístico com **4 casas decimais** + desempate por quantidade e ordem das 5 palavras (1ª a 5ª escolha, dentre 15 palavras).
 * **Privacidade:** Códigos individuais protegidos por hash SHA-256 (não listados publicamente).
-* **Última atualização:** `2026-11-21T23:26:00.177Z`
+* **Última atualização:** `2026-11-21T23:31:49.901Z`
 
 ## Status das Vagas e Formulários de Resposta
 
@@ -27,3 +27,4 @@
 ## Log de Auditoria (Últimos 10 Eventos)
 * `2026-11-21T23:19:34.422Z` — **SESSION_INIT**: Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256.
 * `2026-11-21T23:22:53.746Z` — **SESSION_RESET**: Todas as respostas e formulários foram apagados. Os 5 códigos das vagas foram mantidos para novo teste.
+* `2026-11-21T23:31:49.900Z` — **SESSION_RESET**: Todas as respostas e formulários foram apagados. Os 5 códigos das vagas foram mantidos para novo teste.
