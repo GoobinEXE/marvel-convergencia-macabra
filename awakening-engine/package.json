@@ -1,0 +1,15 @@
+{
+  "name": "marvel-awakening-engine",
+  "version": "1.0.0",
+  "description": "Motor determinístico d616 de seleção e alocação 1-para-1 sem repetição para Marvel Multiverse RPG via GitHub Actions e Limbo OS.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/awakening.test.mjs",
+    "init-session": "node cli/init-session.mjs",
+    "submit-slot": "node cli/submit-slot.mjs",
+    "converge": "node cli/converge-session.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

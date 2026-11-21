@@ -1,0 +1,107 @@
+{
+  "sessionId": "f3589be3-1b2e-41cc-b4cb-10d5fa613652",
+  "campaignName": "Convergência Macabra",
+  "masterCode": "GM-7543UE",
+  "mode": "batch",
+  "maxPlayers": 5,
+  "version": 1,
+  "converged": false,
+  "availablePool": [
+    "melee",
+    "agility",
+    "ego",
+    "logic",
+    "vigilance"
+  ],
+  "slots": {
+    "X616-XTKF": {
+      "slotCode": "X616-XTKF",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "ranking": null,
+      "matchedPairs": [],
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "isUnexpectedAwakening": false,
+      "submittedAt": null
+    },
+    "X616-RUBM": {
+      "slotCode": "X616-RUBM",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "ranking": null,
+      "matchedPairs": [],
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "isUnexpectedAwakening": false,
+      "submittedAt": null
+    },
+    "X616-4FE9": {
+      "slotCode": "X616-4FE9",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "ranking": null,
+      "matchedPairs": [],
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "isUnexpectedAwakening": false,
+      "submittedAt": null
+    },
+    "X616-SWJG": {
+      "slotCode": "X616-SWJG",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "ranking": null,
+      "matchedPairs": [],
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "isUnexpectedAwakening": false,
+      "submittedAt": null
+    },
+    "X616-PZD8": {
+      "slotCode": "X616-PZD8",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "ranking": null,
+      "matchedPairs": [],
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "isUnexpectedAwakening": false,
+      "submittedAt": null
+    }
+  },
+  "auditLog": [
+    {
+      "at": "2026-11-21T20:55:13.678Z",
+      "event": "SESSION_INIT",
+      "detail": "Sessão criada no modo 'batch' com 5 códigos (X616-XTKF, X616-RUBM, X616-4FE9, X616-SWJG, X616-PZD8)."
+    }
+  ],
+  "createdAt": "2026-11-21T20:55:13.678Z",
+  "updatedAt": "2026-11-21T20:55:13.680Z"
+}

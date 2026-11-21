@@ -1,0 +1,47 @@
+name: "Marvel Awakening — 3. Disparar Convergência (Mestre)"
+
+on:
+  repository_dispatch:
+    types: [marvel-awakening-converge]
+  workflow_dispatch:
+    inputs:
+      force_reconverge:
+        description: "Forçar recálculo mesmo se já convergida?"
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marvel-awakening-state
+  cancel-in-progress: false
+
+jobs:
+  converge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório atualizado
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Executar alocação 1-para-1 ótima (5! = 120) e exportar fichas
+        env:
+          FORCE_RECONVERGE: ${{ github.event.client_payload.forceReconverge || inputs.force_reconverge }}
+        run: node awakening-engine/cli/converge-session.mjs
+
+      - name: Salvar resultados e exportações no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if ! git diff --staged --quiet; then
+            git commit -m "feat(awakening): convergência concluída e fichas reveladas"
+            git pull --rebase
+            git push
+          fi

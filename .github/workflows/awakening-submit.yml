@@ -1,0 +1,98 @@
+name: "Marvel Awakening — 2. Submeter Jogador (Limbo OS / Manual)"
+
+on:
+  repository_dispatch:
+    types: [marvel-awakening-submit]
+  workflow_dispatch:
+    inputs:
+      slot_code:
+        description: "Código único da vaga (ex.: X616-ABCD)"
+        required: true
+      player_name:
+        description: "Nome do jogador"
+        required: true
+      civil_name:
+        description: "Nome civil do personagem"
+        required: true
+      civil_age:
+        description: "Idade"
+        required: false
+        default: ""
+      civil_occupation:
+        description: "Ocupação civil"
+        required: false
+        default: ""
+      visual_appearance:
+        description: "Aparência visual (pessoa normal)"
+        required: false
+        default: ""
+      pre_power_history:
+        description: "Histórico pré-poderes"
+        required: false
+        default: ""
+      answer_q1:
+        description: "Resposta Pergunta 1 (A–E ou ID da opção)"
+        required: true
+      answer_q2:
+        description: "Resposta Pergunta 2 (A–E ou ID da opção)"
+        required: true
+      answer_q3:
+        description: "Resposta Pergunta 3 (A–E ou ID da opção)"
+        required: true
+      selected_words:
+        description: "5 palavras separadas por vírgula (ex.: Névoa,Precisão,Impacto,Sonho,Instinto)"
+        required: true
+      auto_converge:
+        description: "Convergir automaticamente quando todos responderem? (modo batch)"
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: write
+
+# Fila sequencial estrita: impede que 2 jogadores simultâneos peguem a mesma ficha
+concurrency:
+  group: marvel-awakening-state
+  cancel-in-progress: false
+
+jobs:
+  submit-slot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório atualizado
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Processar submissão e travar vaga
+        env:
+          SLOT_CODE: ${{ github.event.client_payload.slotCode || inputs.slot_code }}
+          PLAYER_NAME: ${{ github.event.client_payload.playerName || inputs.player_name }}
+          CIVIL_NAME: ${{ github.event.client_payload.civilName || inputs.civil_name }}
+          CIVIL_AGE: ${{ github.event.client_payload.civilAge || inputs.civil_age }}
+          CIVIL_OCCUPATION: ${{ github.event.client_payload.civilOccupation || inputs.civil_occupation }}
+          VISUAL_APPEARANCE: ${{ github.event.client_payload.visualAppearance || inputs.visual_appearance }}
+          PRE_POWER_HISTORY: ${{ github.event.client_payload.prePowerHistory || inputs.pre_power_history }}
+          ANSWER_Q1: ${{ github.event.client_payload.answers.q1 || inputs.answer_q1 }}
+          ANSWER_Q2: ${{ github.event.client_payload.answers.q2 || inputs.answer_q2 }}
+          ANSWER_Q3: ${{ github.event.client_payload.answers.q3 || inputs.answer_q3 }}
+          SELECTED_WORDS: ${{ github.event.client_payload.selectedWordsCsv || inputs.selected_words }}
+          AUTO_CONVERGE: ${{ github.event.client_payload.autoConverge != null && github.event.client_payload.autoConverge || inputs.auto_converge }}
+        run: node awakening-engine/cli/submit-slot.mjs
+
+      - name: Persistir estado atualizado (sem repetição)
+        env:
+          SLOT_CODE: ${{ github.event.client_payload.slotCode || inputs.slot_code }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(awakening): submissão registrada para ${SLOT_CODE}"
+            git pull --rebase
+            git push
+          fi

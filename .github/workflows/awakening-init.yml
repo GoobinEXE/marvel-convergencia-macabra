@@ -1,0 +1,71 @@
+name: "Marvel Awakening — 1. Iniciar Sessão (Mestre)"
+
+on:
+  workflow_dispatch:
+    inputs:
+      campaign_name:
+        description: "Nome da campanha"
+        required: true
+        default: "Convergência Macabra"
+      allocation_mode:
+        description: "Modo de alocação (batch = todos respondem antes; instant = trava na hora)"
+        type: choice
+        required: true
+        default: "batch"
+        options:
+          - batch
+          - instant
+      max_players:
+        description: "Quantidade de jogadores (1 a 5)"
+        type: choice
+        required: true
+        default: "5"
+        options:
+          - "5"
+          - "4"
+          - "3"
+          - "2"
+          - "1"
+      code_prefix:
+        description: "Prefixo dos códigos de acesso (ex.: X616)"
+        required: true
+        default: "X616"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: marvel-awakening-state
+  cancel-in-progress: false
+
+jobs:
+  init-session:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Gerar nova sessão e códigos únicos
+        env:
+          CAMPAIGN_NAME: ${{ inputs.campaign_name }}
+          ALLOCATION_MODE: ${{ inputs.allocation_mode }}
+          MAX_PLAYERS: ${{ inputs.max_players }}
+          CODE_PREFIX: ${{ inputs.code_prefix }}
+        run: node awakening-engine/cli/init-session.mjs
+
+      - name: Salvar estado no repositório
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -rf state/exports
+          git add state/
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(awakening): iniciar sessão (${{ inputs.allocation_mode }}, ${{ inputs.max_players }} jogadores)"
+            git pull --rebase
+            git push
+          fi
