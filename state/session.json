@@ -4,7 +4,7 @@
   "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 3,
+  "version": 4,
   "converged": false,
   "availablePool": [
     "melee",
@@ -120,19 +120,54 @@
     },
     "X616-FZXK": {
       "slotCode": "X616-FZXK",
-      "status": "pending",
-      "locked": false,
-      "civilIdentity": null,
-      "answers": null,
-      "selectedWordIds": [],
-      "selectedWordLabels": [],
-      "scores": null,
-      "ranking": null,
+      "status": "submitted",
+      "locked": true,
+      "civilIdentity": {
+        "playerName": "MA",
+        "civilName": "A",
+        "age": "A definir",
+        "occupation": "A definir",
+        "visualAppearance": "A definir",
+        "prePowerHistory": "A definir"
+      },
+      "answers": {
+        "q1": "q1_ego",
+        "q2": "q2_melee",
+        "q3": "q3_ego"
+      },
+      "selectedWordIds": [
+        "w_instinto",
+        "w_precisao",
+        "w_impacto",
+        "w_segredo",
+        "w_estrategia"
+      ],
+      "selectedWordLabels": [
+        "Instinto",
+        "Precisão",
+        "Impacto",
+        "Segredo",
+        "Estratégia"
+      ],
+      "scores": {
+        "melee": 3,
+        "agility": 2,
+        "ego": 5,
+        "logic": 1,
+        "vigilance": 1
+      },
+      "ranking": [
+        "ego",
+        "melee",
+        "agility",
+        "logic",
+        "vigilance"
+      ],
       "matchedPairs": [],
       "assignedArchetypeId": null,
       "assignedAffinityScore": null,
       "isUnexpectedAwakening": false,
-      "submittedAt": null
+      "submittedAt": "2026-11-21T23:07:31.474Z"
     },
     "X616-TETD": {
       "slotCode": "X616-TETD",
@@ -182,8 +217,13 @@
       "at": "2026-11-21T23:06:46.719Z",
       "event": "SLOT_SUBMITTED_BATCH",
       "detail": "Slot X616-34MS (MA) submetido e travado. Aguardando convergência."
+    },
+    {
+      "at": "2026-11-21T23:07:31.474Z",
+      "event": "SLOT_SUBMITTED_BATCH",
+      "detail": "Slot X616-FZXK (MA) submetido e travado. Aguardando convergência."
     }
   ],
   "createdAt": "2026-11-21T21:00:01.384Z",
-  "updatedAt": "2026-11-21T23:06:46.720Z"
+  "updatedAt": "2026-11-21T23:07:31.474Z"
 }
