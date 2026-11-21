@@ -4,19 +4,13 @@
   "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 5,
-  "converged": false,
-  "availablePool": [
-    "melee",
-    "agility",
-    "ego",
-    "logic",
-    "vigilance"
-  ],
+  "version": 6,
+  "converged": true,
+  "availablePool": [],
   "slots": {
     "X616-VQV2": {
       "slotCode": "X616-VQV2",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "civilIdentity": {
         "playerName": "Marcelo",
@@ -60,14 +54,14 @@
         "vigilance"
       ],
       "matchedPairs": [],
-      "assignedArchetypeId": null,
-      "assignedAffinityScore": null,
+      "assignedArchetypeId": "melee",
+      "assignedAffinityScore": 3,
       "isUnexpectedAwakening": false,
       "submittedAt": "2026-11-21T23:04:59.675Z"
     },
     "X616-34MS": {
       "slotCode": "X616-34MS",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "civilIdentity": {
         "playerName": "MA",
@@ -113,14 +107,14 @@
       "matchedPairs": [
         "agility"
       ],
-      "assignedArchetypeId": null,
-      "assignedAffinityScore": null,
+      "assignedArchetypeId": "logic",
+      "assignedAffinityScore": 5,
       "isUnexpectedAwakening": false,
       "submittedAt": "2026-11-21T23:06:46.719Z"
     },
     "X616-FZXK": {
       "slotCode": "X616-FZXK",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "civilIdentity": {
         "playerName": "MA",
@@ -164,14 +158,14 @@
         "vigilance"
       ],
       "matchedPairs": [],
-      "assignedArchetypeId": null,
-      "assignedAffinityScore": null,
+      "assignedArchetypeId": "ego",
+      "assignedAffinityScore": 5,
       "isUnexpectedAwakening": false,
       "submittedAt": "2026-11-21T23:07:31.474Z"
     },
     "X616-TETD": {
       "slotCode": "X616-TETD",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "civilIdentity": {
         "playerName": "MA",
@@ -218,26 +212,61 @@
         "ego",
         "vigilance"
       ],
-      "assignedArchetypeId": null,
-      "assignedAffinityScore": null,
+      "assignedArchetypeId": "vigilance",
+      "assignedAffinityScore": 6,
       "isUnexpectedAwakening": false,
       "submittedAt": "2026-11-21T23:07:50.755Z"
     },
     "X616-YN9E": {
       "slotCode": "X616-YN9E",
-      "status": "pending",
-      "locked": false,
-      "civilIdentity": null,
-      "answers": null,
-      "selectedWordIds": [],
-      "selectedWordLabels": [],
-      "scores": null,
-      "ranking": null,
+      "status": "revealed",
+      "locked": true,
+      "civilIdentity": {
+        "playerName": "MA",
+        "civilName": "A",
+        "age": "A definir",
+        "occupation": "A definir",
+        "visualAppearance": "A definir",
+        "prePowerHistory": "A definir"
+      },
+      "answers": {
+        "q1": "q1_agility",
+        "q2": "q2_vigilance",
+        "q3": "q3_agility"
+      },
+      "selectedWordIds": [
+        "w_instinto",
+        "w_estrategia",
+        "w_resistencia",
+        "w_precisao",
+        "w_nevoa"
+      ],
+      "selectedWordLabels": [
+        "Instinto",
+        "Estratégia",
+        "Resistência",
+        "Precisão",
+        "Névoa"
+      ],
+      "scores": {
+        "melee": 1,
+        "agility": 5,
+        "ego": 1,
+        "logic": 2,
+        "vigilance": 3
+      },
+      "ranking": [
+        "agility",
+        "vigilance",
+        "logic",
+        "melee",
+        "ego"
+      ],
       "matchedPairs": [],
-      "assignedArchetypeId": null,
-      "assignedAffinityScore": null,
+      "assignedArchetypeId": "agility",
+      "assignedAffinityScore": 5,
       "isUnexpectedAwakening": false,
-      "submittedAt": null
+      "submittedAt": "2026-11-21T23:08:09.045Z"
     }
   },
   "auditLog": [
@@ -265,8 +294,18 @@
       "at": "2026-11-21T23:07:50.755Z",
       "event": "SLOT_SUBMITTED_BATCH",
       "detail": "Slot X616-TETD (MA) submetido e travado. Aguardando convergência."
+    },
+    {
+      "at": "2026-11-21T23:08:09.045Z",
+      "event": "SLOT_SUBMITTED_BATCH",
+      "detail": "Slot X616-YN9E (MA) submetido e travado. Aguardando convergência."
+    },
+    {
+      "at": "2026-11-21T23:08:09.045Z",
+      "event": "AUTO_CONVERGED_BATCH",
+      "detail": "Todos os 5 jogadores enviaram. Convergência concluída (soma global: 24 pts, piso mínimo: 3 pts, 1ºs lugares: 4)."
     }
   ],
   "createdAt": "2026-11-21T21:00:01.384Z",
-  "updatedAt": "2026-11-21T23:07:50.755Z"
+  "updatedAt": "2026-11-21T23:08:09.047Z"
 }

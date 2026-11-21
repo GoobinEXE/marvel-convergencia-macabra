@@ -2,191 +2,306 @@
   "sessionId": "6c782be9-e1b9-4971-88ab-4d090f9fd6e6",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 5,
-  "converged": false,
-  "updatedAt": "2026-11-21T23:07:50.755Z",
+  "version": 6,
+  "converged": true,
+  "updatedAt": "2026-11-21T23:08:09.047Z",
   "summary": {
     "totalSlots": 5,
-    "submittedCount": 4,
-    "pendingCount": 1,
-    "revealedCount": 0,
-    "remainingArchetypesCount": 5
+    "submittedCount": 5,
+    "pendingCount": 0,
+    "revealedCount": 5,
+    "remainingArchetypesCount": 0
   },
   "slots": {
     "X616-VQV2": {
       "slotCode": "X616-VQV2",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "playerName": "Marcelo",
       "civilName": "Cleiton",
       "submittedAt": "2026-11-21T23:04:59.675Z",
       "blindQuiz": null,
-      "result": null
+      "result": {
+        "archetypeId": "melee",
+        "slotLabel": "Jogador 01 - Mutante (Melee)",
+        "origin": "Mutant",
+        "originLabel": "Mutante (Gene-X)",
+        "focusAttribute": "Melee",
+        "title": "Lutador Peso-Pesado (Boxe & Super-Força)",
+        "rank": 4,
+        "health": 150,
+        "focus": 120,
+        "karma": 4,
+        "initiative": 3,
+        "healthDR": 3,
+        "damageMultiplier": {
+          "melee": 7,
+          "default": 4
+        },
+        "attributes": {
+          "melee": 7,
+          "agility": 2,
+          "resilience": 5,
+          "vigilance": 3,
+          "ego": 2,
+          "logic": 1
+        },
+        "traits": [
+          "Combat Reflexes",
+          "Battle Ready",
+          "Determination",
+          "Fearless"
+        ],
+        "originTags": [
+          "X-Gene",
+          "Hounded",
+          "Heroic"
+        ],
+        "powerSets": [
+          "Basic",
+          "Super-Strength",
+          "Martial Arts"
+        ],
+        "customizableFields": [
+          "Manifestação visual da mutação (densidade muscular, pele reforçada ou força oculta)",
+          "Estilo visual de guarda e golpes"
+        ],
+        "obsidianFile": "Personagens/Jogadores/Jogador 01 - Mutante (Melee).md",
+        "affinityScore": 3,
+        "isUnexpectedAwakening": false
+      }
     },
     "X616-34MS": {
       "slotCode": "X616-34MS",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "playerName": "MA",
       "civilName": "A",
       "submittedAt": "2026-11-21T23:06:46.719Z",
       "blindQuiz": null,
-      "result": null
+      "result": {
+        "archetypeId": "logic",
+        "slotLabel": "Jogador 04 - Genética Alterada (Logic - Tática e Telecinese)",
+        "origin": "Weird Science",
+        "originLabel": "Genética Alterada (Mutate / Sonho Misterioso)",
+        "focusAttribute": "Logic",
+        "title": "Estrategista Hiper-Cognitivo & Telecinético",
+        "rank": 4,
+        "health": 90,
+        "focus": 150,
+        "karma": 4,
+        "initiative": 4,
+        "healthDR": 0,
+        "damageMultiplier": {
+          "logic": 7,
+          "default": 4
+        },
+        "attributes": {
+          "melee": 1,
+          "agility": 3,
+          "resilience": 3,
+          "vigilance": 4,
+          "ego": 2,
+          "logic": 7
+        },
+        "traits": [
+          "Weird",
+          "Eidetic Memory",
+          "Inventor",
+          "Scientific Expertise",
+          "Battle Ready"
+        ],
+        "originTags": [
+          "Heroic",
+          "Mysterious-Dream"
+        ],
+        "powerSets": [
+          "Basic",
+          "Tactics",
+          "Telekinesis"
+        ],
+        "customizableFields": [
+          "Detalhes do Sonho Misterioso (abdução, alienígena, entidade cósmica ou outro ser poderoso — em aberto)",
+          "Manifestação visual da telecinese"
+        ],
+        "obsidianFile": "Personagens/Jogadores/Jogador 04 - Genética Alterada (Logic - Tática e Telecinese).md",
+        "affinityScore": 5,
+        "isUnexpectedAwakening": false
+      }
     },
     "X616-FZXK": {
       "slotCode": "X616-FZXK",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "playerName": "MA",
       "civilName": "A",
       "submittedAt": "2026-11-21T23:07:31.474Z",
       "blindQuiz": null,
-      "result": null
+      "result": {
+        "archetypeId": "ego",
+        "slotLabel": "Jogador 03 - Mutante (Ego - Ilusão e Telepatia)",
+        "origin": "Mutant",
+        "originLabel": "Mutante (Gene-X)",
+        "focusAttribute": "Ego",
+        "title": "Ilusionista & Telepata da Fumaça/Neblina",
+        "rank": 4,
+        "health": 90,
+        "focus": 150,
+        "karma": 4,
+        "initiative": 4,
+        "healthDR": 0,
+        "damageMultiplier": {
+          "ego": 7,
+          "default": 4
+        },
+        "attributes": {
+          "melee": 1,
+          "agility": 3,
+          "resilience": 3,
+          "vigilance": 4,
+          "ego": 7,
+          "logic": 2
+        },
+        "traits": [
+          "Battle Ready",
+          "Presence",
+          "Beguiling",
+          "Determination"
+        ],
+        "originTags": [
+          "X-Gene",
+          "Hounded",
+          "Heroic"
+        ],
+        "powerSets": [
+          "Basic",
+          "Illusion",
+          "Telepathy"
+        ],
+        "customizableFields": [
+          "Cor e luminosidade da fumaça/neblina (escura ou brilhante; sombras felizes ou tristes)",
+          "Assinatura olfativa/aroma que conduz a telepatia"
+        ],
+        "obsidianFile": "Personagens/Jogadores/Jogador 03 - Mutante (Ego - Ilusão e Telepatia).md",
+        "affinityScore": 5,
+        "isUnexpectedAwakening": false
+      }
     },
     "X616-TETD": {
       "slotCode": "X616-TETD",
-      "status": "submitted",
+      "status": "revealed",
       "locked": true,
       "playerName": "MA",
       "civilName": "A",
       "submittedAt": "2026-11-21T23:07:50.755Z",
       "blindQuiz": null,
-      "result": null
+      "result": {
+        "archetypeId": "vigilance",
+        "slotLabel": "Jogador 05 - Genética Alterada (Vigilance - Sentidos e Reflexos)",
+        "origin": "Weird Science",
+        "originLabel": "Genética Alterada (Mutate / Bio-Enhanced)",
+        "focusAttribute": "Vigilance",
+        "title": "Escalador de Reflexos Puros & Sentidos Hiper-Aguçados",
+        "rank": 4,
+        "health": 90,
+        "focus": 240,
+        "karma": 4,
+        "initiative": 7,
+        "healthDR": 0,
+        "damageMultiplier": {
+          "agility": 5,
+          "default": 4
+        },
+        "attributes": {
+          "melee": 2,
+          "agility": 4,
+          "resilience": 3,
+          "vigilance": 7,
+          "ego": 2,
+          "logic": 2
+        },
+        "traits": [
+          "Weird",
+          "Combat Reflexes",
+          "Situational Awareness",
+          "Battle Ready",
+          "Determination"
+        ],
+        "originTags": [
+          "Heroic",
+          "Bio-Enhanced"
+        ],
+        "powerSets": [
+          "Basic",
+          "Sixth Sense",
+          "Reflexos Bio-Físicos"
+        ],
+        "customizableFields": [
+          "Evento da alteração genética que acelerou o sistema nervoso",
+          "Aparência da aderência em superfícies e da descarga bio-neural"
+        ],
+        "obsidianFile": "Personagens/Jogadores/Jogador 05 - Genética Alterada (Vigilance - Sentidos e Reflexos).md",
+        "affinityScore": 6,
+        "isUnexpectedAwakening": false
+      }
     },
     "X616-YN9E": {
       "slotCode": "X616-YN9E",
-      "status": "pending",
-      "locked": false,
-      "playerName": null,
-      "civilName": null,
-      "submittedAt": null,
-      "blindQuiz": {
-        "slotCode": "X616-YN9E",
-        "requiredWordCount": 5,
-        "questions": [
-          {
-            "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
-            "options": [
-              {
-                "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
-              },
-              {
-                "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
-              },
-              {
-                "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
-              },
-              {
-                "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
-              },
-              {
-                "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
-              }
-            ]
-          },
-          {
-            "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
-            "options": [
-              {
-                "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
-              },
-              {
-                "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
-              },
-              {
-                "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
-              },
-              {
-                "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
-              },
-              {
-                "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
-              }
-            ]
-          },
-          {
-            "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
-            "options": [
-              {
-                "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
-              },
-              {
-                "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
-              },
-              {
-                "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
-              },
-              {
-                "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
-              },
-              {
-                "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
-              }
-            ]
-          }
+      "status": "revealed",
+      "locked": true,
+      "playerName": "MA",
+      "civilName": "A",
+      "submittedAt": "2026-11-21T23:08:09.045Z",
+      "blindQuiz": null,
+      "result": {
+        "archetypeId": "agility",
+        "slotLabel": "Jogador 02 - Mutante (Agility - Tiro)",
+        "origin": "Mutant",
+        "originLabel": "Mutante (Gene-X)",
+        "focusAttribute": "Agility",
+        "title": "Atirador Acrobata & Teleportador Não Letal",
+        "rank": 4,
+        "health": 90,
+        "focus": 150,
+        "karma": 4,
+        "initiative": 4,
+        "healthDR": 0,
+        "damageMultiplier": {
+          "agility": 7,
+          "default": 4
+        },
+        "attributes": {
+          "melee": 2,
+          "agility": 7,
+          "resilience": 3,
+          "vigilance": 4,
+          "ego": 2,
+          "logic": 2
+        },
+        "traits": [
+          "Combat Reflexes",
+          "Battle Ready",
+          "Situational Awareness",
+          "Connections"
         ],
-        "words": [
-          {
-            "id": "w_instinto",
-            "label": "Instinto"
-          },
-          {
-            "id": "w_impacto",
-            "label": "Impacto"
-          },
-          {
-            "id": "w_pressagio",
-            "label": "Presságio"
-          },
-          {
-            "id": "w_segredo",
-            "label": "Segredo"
-          },
-          {
-            "id": "w_precisao",
-            "label": "Precisão"
-          },
-          {
-            "id": "w_fuga",
-            "label": "Fuga"
-          },
-          {
-            "id": "w_nevoa",
-            "label": "Névoa"
-          },
-          {
-            "id": "w_estrategia",
-            "label": "Estratégia"
-          },
-          {
-            "id": "w_resistencia",
-            "label": "Resistência"
-          },
-          {
-            "id": "w_sonho",
-            "label": "Sonho"
-          }
-        ]
-      },
-      "result": null
+        "originTags": [
+          "X-Gene",
+          "Hounded",
+          "Heroic"
+        ],
+        "powerSets": [
+          "Basic",
+          "Ranged Weapons",
+          "Teleportation"
+        ],
+        "customizableFields": [
+          "Arma ou projétil não letal escolhido (revólver, dardos, cartas ou projétil canalizado)",
+          "Efeito visual do teleporte"
+        ],
+        "obsidianFile": "Personagens/Jogadores/Jogador 02 - Mutante (Agility - Tiro).md",
+        "affinityScore": 5,
+        "isUnexpectedAwakening": false
+      }
     }
   }
 }
