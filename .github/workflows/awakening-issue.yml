@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   process-issue:
-    if: contains(github.event.issue.title, '[AWAKEN]')
+    if: contains(github.event.issue.title, '[AWAKEN]') || contains(github.event.issue.title, '[AWAKEN-RESET]')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repositório
@@ -25,16 +25,30 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Extrair respostas da Issue e executar motor d616
-        id: run_engine
+      - name: Processar Reset ou Submissão de Jogador
         env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
+          REPO_NAME: ${{ github.repository }}
         run: |
           node - << 'EOF'
           import { spawnSync } from "node:child_process";
           import fs from "node:fs";
 
+          const title = process.env.ISSUE_TITLE || "";
           const body = process.env.ISSUE_BODY || "";
+          const repo = process.env.REPO_NAME || "GoobinEXE/marvel-convergencia-macabra";
+
+          if (title.includes("[AWAKEN-RESET]")) {
+            const res = spawnSync("node", ["awakening-engine/cli/reset-session.mjs"], { encoding: "utf8" });
+            console.log(res.stdout);
+            fs.writeFileSync(
+              "/tmp/awaken_comment.md",
+              `🔄 **Respostas apagadas com sucesso!**\n\nTodas as 5 vagas voltaram para \`PENDENTE\` mantendo os mesmos códigos secretos.\n\n* Painel: https://goobinexe.github.io/marvel-convergencia-macabra/`
+            );
+            process.exit(0);
+          }
+
           function extract(heading) {
             const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
             const re = new RegExp(`### ${escaped}\\s+([\\s\\S]*?)(?=\\n### |$)`);
@@ -51,9 +65,13 @@ jobs:
           const prePowerHistory = extract("Histórico Pré-Poderes");
           const q1 = extract("1. Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?").slice(0, 1);
           const q2 = extract("2. O que mais marcou a história passada do seu personagem até hoje?").slice(0, 1);
-          const q3 = extract("3. Em um grupo tentando sobreviver a uma crise, qual é o primeiro papel que combina mais com a personalidade dele?") ||
-                     extract("3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?").slice(0, 1);
-          const words = extract("4. Sincronização de Palavras (Escolha exatamente 5 separadas por vírgula)");
+          const q3 = (
+            extract("3. Em um grupo tentando sobreviver a uma crise, qual é o primeiro papel que combina mais com a personalidade dele?") ||
+            extract("3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?")
+          ).slice(0, 1);
+          const words =
+            extract("4. Sincronização de Palavras (Escolha exatamente 5 EM ORDEM de importância, separadas por vírgula)") ||
+            extract("4. Sincronização de Palavras (Escolha exatamente 5 separadas por vírgula)");
 
           const res = spawnSync("node", ["awakening-engine/cli/submit-slot.mjs"], {
             env: {
@@ -67,7 +85,7 @@ jobs:
               PRE_POWER_HISTORY: prePowerHistory,
               ANSWER_Q1: q1,
               ANSWER_Q2: q2,
-              ANSWER_Q3: q3.slice(0, 1),
+              ANSWER_Q3: q3,
               SELECTED_WORDS: words,
               AUTO_CONVERGE: "true",
             },
@@ -77,20 +95,30 @@ jobs:
           console.log(res.stdout);
           if (res.status !== 0) {
             console.error(res.stderr);
-            fs.writeFileSync("/tmp/awaken_comment.md", `❌ **Erro ao processar submissão (${slotCode}):**\n\`\`\`\n${res.stderr || res.stdout}\n\`\`\``);
+            fs.writeFileSync(
+              "/tmp/awaken_comment.md",
+              `❌ **Erro ao processar submissão:**\n\`\`\`\n${res.stderr || res.stdout}\n\`\`\``
+            );
             process.exit(1);
           }
 
-          fs.writeFileSync("/tmp/awaken_comment.md", `✅ **Submissão registrada no GitHub Actions para \`${slotCode}\`!**\n\n\`\`\`\n${res.stdout.trim()}\n\`\`\`\n\nConsulte o painel atualizado em: https://goobinexe.github.io/marvel-convergencia-macabra/`);
+          const matchVaga = res.stdout.match(/Vaga #(\d+)/);
+          const vagaNum = matchVaga ? matchVaga[1] : "1";
+          const formUrl = `https://github.com/${repo}/blob/main/state/respostas/Vaga-0${vagaNum}.md`;
+
+          fs.writeFileSync(
+            "/tmp/awaken_comment.md",
+            `✅ **Submissão registrada no GitHub Actions para a Vaga #${vagaNum}!**\n\n\`\`\`\n${res.stdout.trim()}\n\`\`\`\n\n* 📄 **Formulário completo gerado no repositório:** [state/respostas/Vaga-0${vagaNum}.md](${formUrl})\n* 🌐 **Portal atualizado:** https://goobinexe.github.io/marvel-convergencia-macabra/`
+          );
           EOF
 
-      - name: Commit e Push do estado atualizado
+      - name: Commit e Push do estado e formulários
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state/ docs/
+          git add -A state/ docs/
           if ! git diff --staged --quiet; then
-            git commit -m "chore(awakening): submissão via formulário issue #${{ github.event.issue.number }}"
+            git commit -m "chore(awakening): atualizar estado e formulários via issue #${{ github.event.issue.number }}"
             git pull --rebase
             git push
           fi

@@ -25,7 +25,7 @@
       line-height: 1.5;
       padding: 24px 16px 64px;
     }
-    .container { max-width: 820px; margin: 0 auto; }
+    .container { max-width: 860px; margin: 0 auto; }
     header {
       border-bottom: 1px solid var(--border);
       padding-bottom: 16px;
@@ -67,18 +67,19 @@
     textarea { min-height: 70px; resize: vertical; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
-    button {
+    button, .btn-link {
       display: inline-block;
       background: var(--accent);
       color: #fff;
       border: none;
-      padding: 11px 18px;
+      padding: 10px 16px;
       border-radius: 8px;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       cursor: pointer;
+      text-decoration: none;
     }
-    button:hover { background: var(--accent-hover); }
+    button:hover, .btn-link:hover { background: var(--accent-hover); }
     .btn-secondary { background: #252d42; }
     .btn-secondary:hover { background: #333f5c; }
     .option-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
@@ -143,6 +144,8 @@
     .st-revealed { background: rgba(16, 185, 129, 0.2); color: var(--ok); }
     .hidden { display: none; }
     .code-tag { font-family: monospace; background: #0f131d; padding: 3px 7px; border-radius: 5px; }
+    a.table-link { color: #60a5fa; text-decoration: none; font-weight: 600; }
+    a.table-link:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
@@ -157,9 +160,12 @@
 
     <!-- Painel ao Vivo de Vagas (SEM EXPOR CÓDIGOS) -->
     <div class="card">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <h2 style="margin:0;">Progresso da Mesa (Códigos Privados)</h2>
-        <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="loadPublicState()">Atualizar</button>
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
+        <h2 style="margin:0;">Progresso da Mesa & Formulários de Resposta</h2>
+        <div style="display:flex; gap:8px; flex-wrap:wrap;">
+          <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="loadPublicState()">Atualizar</button>
+          <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="resetAllResponses()">Resetar Respostas (Testar Novamente)</button>
+        </div>
       </div>
       <div style="overflow-x:auto;">
         <table>
@@ -169,11 +175,12 @@
               <th>Status</th>
               <th>Jogador</th>
               <th>Personagem Civil</th>
+              <th>Formulário no Repo</th>
               <th>Resultado</th>
             </tr>
           </thead>
           <tbody id="slotsTableBody">
-            <tr><td colspan="5">Carregando...</td></tr>
+            <tr><td colspan="6">Carregando...</td></tr>
           </tbody>
         </table>
       </div>
@@ -249,7 +256,7 @@
     let publicState = null;
     let activeSlot = null;
     let activeRawCode = "";
-    let orderedWords = []; // preserva ordem 1ª a 5ª
+    let orderedWords = [];
 
     const ID_TO_LETTER = {
       q1_melee: "A", q1_agility: "B", q1_ego: "C", q1_logic: "D", q1_vigilance: "E",
@@ -290,16 +297,27 @@
         const stLabel =
           item.status === "revealed" ? "REVELADO" :
           item.status === "submitted" ? "TRAVADO / AGUARDANDO" : "DISPONÍVEL";
+        const formCell = item.responseFormFile
+          ? `<a class="table-link" href="https://github.com/${REPO}/blob/main/${item.responseFormFile}" target="_blank">Ver Formulário (.md)</a>`
+          : "—";
 
         tr.innerHTML = `
           <td><strong>${item.slotLabel}</strong></td>
           <td><span class="status-pill ${stClass}">${stLabel}</span></td>
           <td>${item.playerName || "—"}</td>
           <td>${item.civilName || "—"}</td>
+          <td>${formCell}</td>
           <td>${item.resultTitle ? `<strong>${item.resultTitle}</strong>` : "—"}</td>
         `;
         tbody.appendChild(tr);
       }
+    }
+
+    function resetAllResponses() {
+      const title = "[AWAKEN-RESET] Apagar respostas atuais e manter os mesmos códigos";
+      const body = "Ao clicar em **Submit new issue**, o GitHub Actions executará `awakening-reset` e limpará todas as respostas atuais, mantendo os mesmos 5 códigos secretos para você testar novamente.";
+      const url = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+      window.open(url, "_blank");
     }
 
     async function validateCode() {
@@ -334,8 +352,9 @@
       }
 
       if (slot.locked) {
+        const formUrl = `https://github.com/${REPO}/blob/main/${slot.responseFormFile}`;
         msgEl.style.color = "#f59e0b";
-        msgEl.textContent = `Sua vaga (${slot.slotLabel} — ${slot.playerName}) já foi registrada e travada. Aguardando os demais jogadores para convergência.`;
+        msgEl.innerHTML = `Sua vaga (${slot.slotLabel} — ${slot.playerName}) já foi registrada e travada. <a class="table-link" href="${formUrl}" target="_blank">Ver seu Formulário no Repositório</a>.`;
         return;
       }
 
@@ -417,9 +436,10 @@
         .map(([k, v]) => `<span class="code-tag">${k.toUpperCase()}: ${v} (Def ${10 + v})</span>`)
         .join(" ");
       const posStr = (r.wordPositions || []).map((p) => `${p}ª`).join(", ") || "nenhuma";
+      const formUrl = `https://github.com/${REPO}/blob/main/${slot.responseFormFile}`;
 
       document.getElementById("resultContent").innerHTML = `
-        <p><strong>Jogador:</strong> ${slot.playerName} | <strong>Personagem Civil:</strong> ${slot.civilName}</p>
+        <p><strong>Jogador:</strong> ${slot.playerName} | <strong>Personagem Civil:</strong> ${slot.civilName} | <a class="table-link" href="${formUrl}" target="_blank">Abrir Formulário da Resposta (.md)</a></p>
         <p><strong>Ficha Atribuída:</strong> ${r.slotLabel} — <strong>${r.title}</strong></p>
         <p><strong>Pontuação Final (4 Casas Decimais):</strong> <span class="code-tag">${r.affinityScoreFormatted} pts</span> (${r.wordHitsCount} palavra(s) sincronizada(s) nas posições: ${posStr})</p>
         <p><strong>Origem:</strong> ${r.originLabel} | <strong>Foco Principal:</strong> ${r.focusAttribute} | <strong>Rank:</strong> ${r.rank}</p>

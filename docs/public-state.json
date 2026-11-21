@@ -2,9 +2,9 @@
   "sessionId": "f78894d8-f98d-4a7e-83ee-a8c9d6954315",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 1,
+  "version": 2,
   "converged": false,
-  "updatedAt": "2026-11-21T23:19:34.423Z",
+  "updatedAt": "2026-11-21T23:22:53.746Z",
   "summary": {
     "totalSlots": 5,
     "submittedCount": 0,
@@ -15,53 +15,64 @@
   "publicSlotList": [
     {
       "slotId": "slot_1",
+      "slotNumber": 1,
       "slotLabel": "Vaga #1",
       "status": "pending",
       "locked": false,
       "playerName": null,
       "civilName": null,
+      "responseFormFile": null,
       "resultTitle": null
     },
     {
       "slotId": "slot_2",
+      "slotNumber": 2,
       "slotLabel": "Vaga #2",
       "status": "pending",
       "locked": false,
       "playerName": null,
       "civilName": null,
+      "responseFormFile": null,
       "resultTitle": null
     },
     {
       "slotId": "slot_3",
+      "slotNumber": 3,
       "slotLabel": "Vaga #3",
       "status": "pending",
       "locked": false,
       "playerName": null,
       "civilName": null,
+      "responseFormFile": null,
       "resultTitle": null
     },
     {
       "slotId": "slot_4",
+      "slotNumber": 4,
       "slotLabel": "Vaga #4",
       "status": "pending",
       "locked": false,
       "playerName": null,
       "civilName": null,
+      "responseFormFile": null,
       "resultTitle": null
     },
     {
       "slotId": "slot_5",
+      "slotNumber": 5,
       "slotLabel": "Vaga #5",
       "status": "pending",
       "locked": false,
       "playerName": null,
       "civilName": null,
+      "responseFormFile": null,
       "resultTitle": null
     }
   ],
   "slotsByHash": {
     "2c32741c76141ff475be31f3e1235a286244027ed76a17a23f7c820d8b5a1d26": {
       "slotId": "slot_1",
+      "slotNumber": 1,
       "slotLabel": "Vaga #1",
       "codeHash": "2c32741c76141ff475be31f3e1235a286244027ed76a17a23f7c820d8b5a1d26",
       "status": "pending",
@@ -69,6 +80,7 @@
       "playerName": null,
       "civilName": null,
       "submittedAt": null,
+      "responseFormFile": null,
       "blindQuiz": {
         "requiredWordCount": 5,
         "questions": [
@@ -218,6 +230,7 @@
     },
     "5ad1bb15d68fb7f7bedf60a22dec8e8def5ac2995362fc126240fbc139f93e44": {
       "slotId": "slot_2",
+      "slotNumber": 2,
       "slotLabel": "Vaga #2",
       "codeHash": "5ad1bb15d68fb7f7bedf60a22dec8e8def5ac2995362fc126240fbc139f93e44",
       "status": "pending",
@@ -225,6 +238,7 @@
       "playerName": null,
       "civilName": null,
       "submittedAt": null,
+      "responseFormFile": null,
       "blindQuiz": {
         "requiredWordCount": 5,
         "questions": [
@@ -374,6 +388,7 @@
     },
     "f92f66cacab8e9f2f552749b9c67659f8e1ab7986030e05e189bad8cfcbe8177": {
       "slotId": "slot_3",
+      "slotNumber": 3,
       "slotLabel": "Vaga #3",
       "codeHash": "f92f66cacab8e9f2f552749b9c67659f8e1ab7986030e05e189bad8cfcbe8177",
       "status": "pending",
@@ -381,6 +396,7 @@
       "playerName": null,
       "civilName": null,
       "submittedAt": null,
+      "responseFormFile": null,
       "blindQuiz": {
         "requiredWordCount": 5,
         "questions": [
@@ -530,6 +546,7 @@
     },
     "c1a4003b2f7573d2c42e487e65facf532727061e8aa7255447d815dc24d06c5b": {
       "slotId": "slot_4",
+      "slotNumber": 4,
       "slotLabel": "Vaga #4",
       "codeHash": "c1a4003b2f7573d2c42e487e65facf532727061e8aa7255447d815dc24d06c5b",
       "status": "pending",
@@ -537,6 +554,7 @@
       "playerName": null,
       "civilName": null,
       "submittedAt": null,
+      "responseFormFile": null,
       "blindQuiz": {
         "requiredWordCount": 5,
         "questions": [
@@ -686,6 +704,7 @@
     },
     "1fa2eb8a18fd7710ef2a05a828510a05b89e6efeca5d33ba50c0edfcf27d9253": {
       "slotId": "slot_5",
+      "slotNumber": 5,
       "slotLabel": "Vaga #5",
       "codeHash": "1fa2eb8a18fd7710ef2a05a828510a05b89e6efeca5d33ba50c0edfcf27d9253",
       "status": "pending",
@@ -693,6 +712,7 @@
       "playerName": null,
       "civilName": null,
       "submittedAt": null,
+      "responseFormFile": null,
       "blindQuiz": {
         "requiredWordCount": 5,
         "questions": [

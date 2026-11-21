@@ -3,7 +3,7 @@
   "campaignName": "Convergência Macabra",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 1,
+  "version": 2,
   "converged": false,
   "availablePool": [
     "melee",
@@ -129,8 +129,13 @@
       "at": "2026-11-21T23:19:34.422Z",
       "event": "SESSION_INIT",
       "detail": "Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256."
+    },
+    {
+      "at": "2026-11-21T23:22:53.746Z",
+      "event": "SESSION_RESET",
+      "detail": "Todas as respostas e formulários foram apagados. Os 5 códigos das vagas foram mantidos para novo teste."
     }
   ],
   "createdAt": "2026-11-21T23:19:34.422Z",
-  "updatedAt": "2026-11-21T23:19:34.423Z"
+  "updatedAt": "2026-11-21T23:22:53.746Z"
 }
