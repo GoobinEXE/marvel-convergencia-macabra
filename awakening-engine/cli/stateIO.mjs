@@ -15,7 +15,7 @@ export function resolveStateDir() {
 export function loadSession(stateDir = resolveStateDir()) {
   const sessionPath = path.join(stateDir, "session.json");
   if (!fs.existsSync(sessionPath)) {
-    throw new Error(`Arquivo de sessão não encontrado em ${sessionPath}. Execute primeiro o workflow awakening-init.`);
+    throw new Error(`Arquivo de sessão não encontrado em ${sessionPath}. Execute primeiro o init-session.`);
   }
   return JSON.parse(fs.readFileSync(sessionPath, "utf8"));
 }
@@ -42,7 +42,6 @@ export function saveSessionAndViews(session, stateDir = resolveStateDir()) {
   const boardMd = renderStatusBoard(session);
   fs.writeFileSync(boardPath, boardMd, "utf8");
 
-  // Gera exportações individuais em Markdown para todos os slots já revelados
   const revealedSlots = Object.values(session.slots).filter(
     (s) => s.status === "revealed" && s.assignedArchetypeId
   );
@@ -50,12 +49,11 @@ export function saveSessionAndViews(session, stateDir = resolveStateDir()) {
     const exportsDir = path.join(stateDir, "exports");
     fs.mkdirSync(exportsDir, { recursive: true });
     for (const slot of revealedSlots) {
-      const safeName = `${slot.slotCode}-${slot.assignedArchetypeId}.md`;
+      const safeName = `vaga-${slot.slotNumber}-${slot.assignedArchetypeId}.md`;
       fs.writeFileSync(path.join(exportsDir, safeName), renderPlayerExportMarkdown(slot), "utf8");
     }
   }
 
-  // Se estiver rodando no GitHub Actions, publica o painel direto no Step Summary
   if (process.env.GITHUB_STEP_SUMMARY) {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, boardMd + "\n", "utf8");
   }

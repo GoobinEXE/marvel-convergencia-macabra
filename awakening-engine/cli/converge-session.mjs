@@ -19,9 +19,11 @@ const batchResult = resolveBatchAssignments(submittedSlots);
 const now = new Date().toISOString();
 
 for (const slot of submittedSlots) {
-  const assigned = batchResult.assignments[slot.slotCode];
+  const assigned = batchResult.assignments[slot.slotId];
   slot.assignedArchetypeId = assigned.archetypeId;
   slot.assignedAffinityScore = assigned.affinityScore;
+  slot.assignedWordHitsCount = assigned.wordHitsCount;
+  slot.assignedWordPositions = assigned.wordPositions;
   slot.isUnexpectedAwakening = assigned.isUnexpectedAwakening;
   slot.status = "revealed";
 }
@@ -31,22 +33,15 @@ session.converged = true;
 session.auditLog.push({
   at: now,
   event: "MANUAL_CONVERGENCE",
-  detail: `Convergência disparada para ${submittedSlots.length} jogador(es). Soma global: ${batchResult.metrics.totalScore} pts | Piso mínimo: ${batchResult.metrics.minScore} pts | 1ºs lugares: ${batchResult.metrics.firstChoicesHit}.`,
+  detail: `Convergência 4-casas disparada para ${submittedSlots.length} jogador(es). Soma global: ${batchResult.metrics.totalScoreFormatted} pts | Piso mínimo: ${batchResult.metrics.minScoreFormatted} pts | Palavras sincronizadas: ${batchResult.metrics.totalWordHits}.`,
 });
-
-if (batchResult.tieBreakAudit) {
-  session.auditLog.push({
-    at: now,
-    event: "TIE_BREAK_D616",
-    detail: JSON.stringify(batchResult.tieBreakAudit),
-  });
-}
 
 saveSessionAndViews(session);
 
 console.log(`Convergência concluída com sucesso para ${submittedSlots.length} jogador(es):`);
 for (const slot of submittedSlots) {
+  const assigned = batchResult.assignments[slot.slotId];
   console.log(
-    `  - ${slot.slotCode} (${slot.civilIdentity?.playerName}): ${slot.assignedArchetypeId} (${slot.assignedAffinityScore} pts)`
+    `  - Vaga #${slot.slotNumber} (${slot.civilIdentity?.playerName}): ${assigned.archetypeId} (${assigned.affinityScoreFormatted} pts | ${assigned.wordHitsCount} palavra(s) nas posições [${assigned.wordPositions.join(", ")}])`
   );
 }

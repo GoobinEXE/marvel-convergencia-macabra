@@ -1,28 +1,28 @@
 # Painel de Controle — Despertar de Poderes (Convergência Macabra)
 
-* **Sessão:** `6c782be9-e1b9-4971-88ab-4d090f9fd6e6`
-* **Modo:** `batch` | **Convergência Concluída:** `SIM` | **Versão:** `v6`
-* **Progresso:** **5/5** responderam (**0** pendentes) | **Fichas livres no pool:** 0
-* **Última atualização:** `2026-11-21T23:08:09.047Z`
+* **Sessão:** `5ff98a98-6473-46f8-96c5-08e58b81b843`
+* **Modo:** `batch` | **Convergência Concluída:** `NÃO` | **Versão:** `v1`
+* **Progresso:** **0/5** responderam (**5** pendentes) | **Fichas livres no pool:** 5
+* **Sistema de Pontuação:** Determinístico com **4 casas decimais** + desempate por quantidade e ordem das 5 palavras (1ª a 5ª escolha, dentre 15 palavras).
+* **Privacidade:** Códigos individuais protegidos por hash SHA-256 (não listados publicamente).
+* **Última atualização:** `2026-11-21T23:18:42.870Z`
 
-## Status por Código de Vaga
+## Status das Vagas (Códigos Ocultos)
 
-| Código | Status | Jogador | Nome Civil | Ficha Atribuída | Afinidade |
-| :--- | :---: | :--- | :--- | :--- | :---: |
-| `X616-VQV2` | REVELADO | Marcelo | Cleiton | `melee` (Lutador Peso-Pesado (Boxe & Super-Força)) | 3 pts |
-| `X616-34MS` | REVELADO | MA | A | `logic` (Estrategista Hiper-Cognitivo & Telecinético) | 5 pts |
-| `X616-FZXK` | REVELADO | MA | A | `ego` (Ilusionista & Telepata da Fumaça/Neblina) | 5 pts |
-| `X616-TETD` | REVELADO | MA | A | `vigilance` (Escalador de Reflexos Puros & Sentidos Hiper-Aguçados) | 6 pts |
-| `X616-YN9E` | REVELADO | MA | A | `agility` (Atirador Acrobata & Teleportador Não Letal) | 5 pts |
+| Vaga | Status | Jogador | Nome Civil | Ficha Atribuída | Pontuação (4 casas) | Palavras da Ficha (Ordem) |
+| :--- | :---: | :--- | :--- | :--- | :---: | :---: |
+| **Vaga #1** | PENDENTE | — | — | — | — | — |
+| **Vaga #2** | PENDENTE | — | — | — | — | — |
+| **Vaga #3** | PENDENTE | — | — | — | — | — |
+| **Vaga #4** | PENDENTE | — | — | — | — | — |
+| **Vaga #5** | PENDENTE | — | — | — | — | — |
 
 ## Fichas Restantes no Pool (Sem Repetição)
-* Todas as fichas atribuídas (0 restantes).
+* `melee` — Jogador 01 - Mutante (Melee)
+* `agility` — Jogador 02 - Mutante (Agility - Tiro)
+* `ego` — Jogador 03 - Mutante (Ego - Ilusão e Telepatia)
+* `logic` — Jogador 04 - Genética Alterada (Logic - Tática e Telecinese)
+* `vigilance` — Jogador 05 - Genética Alterada (Vigilance - Sentidos e Reflexos)
 
 ## Log de Auditoria (Últimos 10 Eventos)
-* `2026-11-21T21:00:01.384Z` — **SESSION_INIT**: Sessão criada no modo 'batch' com 5 códigos (X616-VQV2, X616-34MS, X616-FZXK, X616-TETD, X616-YN9E).
-* `2026-11-21T23:04:59.675Z` — **SLOT_SUBMITTED_BATCH**: Slot X616-VQV2 (Marcelo) submetido e travado. Aguardando convergência.
-* `2026-11-21T23:06:46.719Z` — **SLOT_SUBMITTED_BATCH**: Slot X616-34MS (MA) submetido e travado. Aguardando convergência.
-* `2026-11-21T23:07:31.474Z` — **SLOT_SUBMITTED_BATCH**: Slot X616-FZXK (MA) submetido e travado. Aguardando convergência.
-* `2026-11-21T23:07:50.755Z` — **SLOT_SUBMITTED_BATCH**: Slot X616-TETD (MA) submetido e travado. Aguardando convergência.
-* `2026-11-21T23:08:09.045Z` — **SLOT_SUBMITTED_BATCH**: Slot X616-YN9E (MA) submetido e travado. Aguardando convergência.
-* `2026-11-21T23:08:09.045Z` — **AUTO_CONVERGED_BATCH**: Todos os 5 jogadores enviaram. Convergência concluída (soma global: 24 pts, piso mínimo: 3 pts, 1ºs lugares: 4).
+* `2026-11-21T23:18:42.870Z` — **SESSION_INIT**: Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256.

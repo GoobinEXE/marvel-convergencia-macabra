@@ -2,6 +2,13 @@ import crypto from "node:crypto";
 
 const CODE_ALPHABET = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
 
+export function sha256Hex(str) {
+  return crypto
+    .createHash("sha256")
+    .update(String(str || "").trim().toUpperCase(), "utf8")
+    .digest("hex");
+}
+
 function hashSeed(str) {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < str.length; i++) {

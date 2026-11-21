@@ -1,311 +1,136 @@
 {
-  "sessionId": "6c782be9-e1b9-4971-88ab-4d090f9fd6e6",
+  "sessionId": "5ff98a98-6473-46f8-96c5-08e58b81b843",
   "campaignName": "Convergência Macabra",
-  "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 6,
-  "converged": true,
-  "availablePool": [],
+  "version": 1,
+  "converged": false,
+  "availablePool": [
+    "melee",
+    "agility",
+    "ego",
+    "logic",
+    "vigilance"
+  ],
   "slots": {
-    "X616-VQV2": {
-      "slotCode": "X616-VQV2",
-      "status": "revealed",
-      "locked": true,
-      "civilIdentity": {
-        "playerName": "Marcelo",
-        "civilName": "Cleiton",
-        "age": "24",
-        "occupation": "LUTADOR",
-        "visualAppearance": "A",
-        "prePowerHistory": "A"
-      },
-      "answers": {
-        "q1": "q1_logic",
-        "q2": "q2_ego",
-        "q3": "q3_melee"
-      },
-      "selectedWordIds": [
-        "w_sonho",
-        "w_segredo",
-        "w_resistencia",
-        "w_pressagio",
-        "w_precisao"
-      ],
-      "selectedWordLabels": [
-        "Sonho",
-        "Segredo",
-        "Resistência",
-        "Presságio",
-        "Precisão"
-      ],
-      "scores": {
-        "melee": 3,
-        "agility": 1,
-        "ego": 4,
-        "logic": 3,
-        "vigilance": 1
-      },
-      "ranking": [
-        "ego",
-        "melee",
-        "logic",
-        "agility",
-        "vigilance"
-      ],
-      "matchedPairs": [],
-      "assignedArchetypeId": "melee",
-      "assignedAffinityScore": 3,
+    "slot_1": {
+      "slotId": "slot_1",
+      "slotNumber": 1,
+      "codeHash": "19dc2cd6eaa5ddcec6871a2e62a6b3b9aadde730ea6fec905311129a667d36b7",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "wordHits": null,
+      "wordPositions": null,
+      "wordOrderMask": null,
+      "ranking": null,
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "assignedWordHitsCount": 0,
+      "assignedWordPositions": [],
       "isUnexpectedAwakening": false,
-      "submittedAt": "2026-11-21T23:04:59.675Z"
+      "submittedAt": null
     },
-    "X616-34MS": {
-      "slotCode": "X616-34MS",
-      "status": "revealed",
-      "locked": true,
-      "civilIdentity": {
-        "playerName": "MA",
-        "civilName": "A",
-        "age": "A definir",
-        "occupation": "A definir",
-        "visualAppearance": "A definir",
-        "prePowerHistory": "A definir"
-      },
-      "answers": {
-        "q1": "q1_logic",
-        "q2": "q2_ego",
-        "q3": "q3_logic"
-      },
-      "selectedWordIds": [
-        "w_nevoa",
-        "w_fuga",
-        "w_pressagio",
-        "w_precisao",
-        "w_sonho"
-      ],
-      "selectedWordLabels": [
-        "Névoa",
-        "Fuga",
-        "Presságio",
-        "Precisão",
-        "Sonho"
-      ],
-      "scores": {
-        "melee": 0,
-        "agility": 3,
-        "ego": 4,
-        "logic": 5,
-        "vigilance": 1
-      },
-      "ranking": [
-        "logic",
-        "ego",
-        "agility",
-        "vigilance",
-        "melee"
-      ],
-      "matchedPairs": [
-        "agility"
-      ],
-      "assignedArchetypeId": "logic",
-      "assignedAffinityScore": 5,
+    "slot_2": {
+      "slotId": "slot_2",
+      "slotNumber": 2,
+      "codeHash": "a8b0a6d9c76978b1480b3b074aeca34cc67e7394c61780e96d58c39e4addd38a",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "wordHits": null,
+      "wordPositions": null,
+      "wordOrderMask": null,
+      "ranking": null,
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "assignedWordHitsCount": 0,
+      "assignedWordPositions": [],
       "isUnexpectedAwakening": false,
-      "submittedAt": "2026-11-21T23:06:46.719Z"
+      "submittedAt": null
     },
-    "X616-FZXK": {
-      "slotCode": "X616-FZXK",
-      "status": "revealed",
-      "locked": true,
-      "civilIdentity": {
-        "playerName": "MA",
-        "civilName": "A",
-        "age": "A definir",
-        "occupation": "A definir",
-        "visualAppearance": "A definir",
-        "prePowerHistory": "A definir"
-      },
-      "answers": {
-        "q1": "q1_ego",
-        "q2": "q2_melee",
-        "q3": "q3_ego"
-      },
-      "selectedWordIds": [
-        "w_instinto",
-        "w_precisao",
-        "w_impacto",
-        "w_segredo",
-        "w_estrategia"
-      ],
-      "selectedWordLabels": [
-        "Instinto",
-        "Precisão",
-        "Impacto",
-        "Segredo",
-        "Estratégia"
-      ],
-      "scores": {
-        "melee": 3,
-        "agility": 2,
-        "ego": 5,
-        "logic": 1,
-        "vigilance": 1
-      },
-      "ranking": [
-        "ego",
-        "melee",
-        "agility",
-        "logic",
-        "vigilance"
-      ],
-      "matchedPairs": [],
-      "assignedArchetypeId": "ego",
-      "assignedAffinityScore": 5,
+    "slot_3": {
+      "slotId": "slot_3",
+      "slotNumber": 3,
+      "codeHash": "10eb855169d38a9444bd55af99cad84a018edadae8bd8cb51ac968f7f6838c67",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "wordHits": null,
+      "wordPositions": null,
+      "wordOrderMask": null,
+      "ranking": null,
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "assignedWordHitsCount": 0,
+      "assignedWordPositions": [],
       "isUnexpectedAwakening": false,
-      "submittedAt": "2026-11-21T23:07:31.474Z"
+      "submittedAt": null
     },
-    "X616-TETD": {
-      "slotCode": "X616-TETD",
-      "status": "revealed",
-      "locked": true,
-      "civilIdentity": {
-        "playerName": "MA",
-        "civilName": "A",
-        "age": "A definir",
-        "occupation": "A definir",
-        "visualAppearance": "A definir",
-        "prePowerHistory": "A definir"
-      },
-      "answers": {
-        "q1": "q1_melee",
-        "q2": "q2_logic",
-        "q3": "q3_vigilance"
-      },
-      "selectedWordIds": [
-        "w_instinto",
-        "w_segredo",
-        "w_nevoa",
-        "w_fuga",
-        "w_pressagio"
-      ],
-      "selectedWordLabels": [
-        "Instinto",
-        "Segredo",
-        "Névoa",
-        "Fuga",
-        "Presságio"
-      ],
-      "scores": {
-        "melee": 2,
-        "agility": 1,
-        "ego": 3,
-        "logic": 2,
-        "vigilance": 6
-      },
-      "ranking": [
-        "vigilance",
-        "ego",
-        "melee",
-        "logic",
-        "agility"
-      ],
-      "matchedPairs": [
-        "ego",
-        "vigilance"
-      ],
-      "assignedArchetypeId": "vigilance",
-      "assignedAffinityScore": 6,
+    "slot_4": {
+      "slotId": "slot_4",
+      "slotNumber": 4,
+      "codeHash": "7ad8d0b336e2dcd1affe36f57e3c33a873c98db88015c30db4c5d59284130115",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "wordHits": null,
+      "wordPositions": null,
+      "wordOrderMask": null,
+      "ranking": null,
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "assignedWordHitsCount": 0,
+      "assignedWordPositions": [],
       "isUnexpectedAwakening": false,
-      "submittedAt": "2026-11-21T23:07:50.755Z"
+      "submittedAt": null
     },
-    "X616-YN9E": {
-      "slotCode": "X616-YN9E",
-      "status": "revealed",
-      "locked": true,
-      "civilIdentity": {
-        "playerName": "MA",
-        "civilName": "A",
-        "age": "A definir",
-        "occupation": "A definir",
-        "visualAppearance": "A definir",
-        "prePowerHistory": "A definir"
-      },
-      "answers": {
-        "q1": "q1_agility",
-        "q2": "q2_vigilance",
-        "q3": "q3_agility"
-      },
-      "selectedWordIds": [
-        "w_instinto",
-        "w_estrategia",
-        "w_resistencia",
-        "w_precisao",
-        "w_nevoa"
-      ],
-      "selectedWordLabels": [
-        "Instinto",
-        "Estratégia",
-        "Resistência",
-        "Precisão",
-        "Névoa"
-      ],
-      "scores": {
-        "melee": 1,
-        "agility": 5,
-        "ego": 1,
-        "logic": 2,
-        "vigilance": 3
-      },
-      "ranking": [
-        "agility",
-        "vigilance",
-        "logic",
-        "melee",
-        "ego"
-      ],
-      "matchedPairs": [],
-      "assignedArchetypeId": "agility",
-      "assignedAffinityScore": 5,
+    "slot_5": {
+      "slotId": "slot_5",
+      "slotNumber": 5,
+      "codeHash": "8708ddae93391a0fcebc3559f49993881a12c71c7b45979ed04456404feae181",
+      "status": "pending",
+      "locked": false,
+      "civilIdentity": null,
+      "answers": null,
+      "selectedWordIds": [],
+      "selectedWordLabels": [],
+      "scores": null,
+      "wordHits": null,
+      "wordPositions": null,
+      "wordOrderMask": null,
+      "ranking": null,
+      "assignedArchetypeId": null,
+      "assignedAffinityScore": null,
+      "assignedWordHitsCount": 0,
+      "assignedWordPositions": [],
       "isUnexpectedAwakening": false,
-      "submittedAt": "2026-11-21T23:08:09.045Z"
+      "submittedAt": null
     }
   },
   "auditLog": [
     {
-      "at": "2026-11-21T21:00:01.384Z",
+      "at": "2026-11-21T23:18:42.870Z",
       "event": "SESSION_INIT",
-      "detail": "Sessão criada no modo 'batch' com 5 códigos (X616-VQV2, X616-34MS, X616-FZXK, X616-TETD, X616-YN9E)."
-    },
-    {
-      "at": "2026-11-21T23:04:59.675Z",
-      "event": "SLOT_SUBMITTED_BATCH",
-      "detail": "Slot X616-VQV2 (Marcelo) submetido e travado. Aguardando convergência."
-    },
-    {
-      "at": "2026-11-21T23:06:46.719Z",
-      "event": "SLOT_SUBMITTED_BATCH",
-      "detail": "Slot X616-34MS (MA) submetido e travado. Aguardando convergência."
-    },
-    {
-      "at": "2026-11-21T23:07:31.474Z",
-      "event": "SLOT_SUBMITTED_BATCH",
-      "detail": "Slot X616-FZXK (MA) submetido e travado. Aguardando convergência."
-    },
-    {
-      "at": "2026-11-21T23:07:50.755Z",
-      "event": "SLOT_SUBMITTED_BATCH",
-      "detail": "Slot X616-TETD (MA) submetido e travado. Aguardando convergência."
-    },
-    {
-      "at": "2026-11-21T23:08:09.045Z",
-      "event": "SLOT_SUBMITTED_BATCH",
-      "detail": "Slot X616-YN9E (MA) submetido e travado. Aguardando convergência."
-    },
-    {
-      "at": "2026-11-21T23:08:09.045Z",
-      "event": "AUTO_CONVERGED_BATCH",
-      "detail": "Todos os 5 jogadores enviaram. Convergência concluída (soma global: 24 pts, piso mínimo: 3 pts, 1ºs lugares: 4)."
+      "detail": "Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256."
     }
   ],
-  "createdAt": "2026-11-21T21:00:01.384Z",
-  "updatedAt": "2026-11-21T23:08:09.047Z"
+  "createdAt": "2026-11-21T23:18:42.870Z",
+  "updatedAt": "2026-11-21T23:18:42.870Z"
 }

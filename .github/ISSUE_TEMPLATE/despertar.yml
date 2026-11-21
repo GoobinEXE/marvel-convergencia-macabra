@@ -1,5 +1,5 @@
 name: "Despertar de Poderes — Enviar Respostas (d616)"
-description: "Preencha seu código de vaga, identidade civil, 3 perguntas e 5 palavras para registrar no GitHub Actions."
+description: "Preencha seu código secreto de vaga, identidade civil, 3 perguntas e 5 palavras EM ORDEM de prioridade."
 title: "[AWAKEN] Submissão de Jogador"
 labels: ["awakening-submit"]
 body:
@@ -7,7 +7,7 @@ body:
     id: slot_code
     attributes:
       label: "Código da Vaga"
-      description: "Código individual enviado pelo Mestre (ex.: X616-VQV2)"
+      description: "Código individual e secreto enviado em particular pelo Mestre"
       placeholder: "X616-XXXX"
     validations:
       required: true
@@ -102,8 +102,8 @@ body:
   - type: input
     id: selected_words
     attributes:
-      label: "4. Sincronização de Palavras (Escolha exatamente 5 separadas por vírgula)"
-      description: "Opções disponíveis: Névoa, Precisão, Impacto, Sonho, Instinto, Segredo, Fuga, Resistência, Presságio, Estratégia"
-      placeholder: "Névoa, Precisão, Impacto, Sonho, Instinto"
+      label: "4. Sincronização de Palavras (Escolha exatamente 5 EM ORDEM de importância, separadas por vírgula)"
+      description: "A ordem (1ª a 5ª) altera a pontuação e desempata! Lista (15 palavras): Impacto, Resistência, Firmeza, Precisão, Fuga, Reflexo, Névoa, Segredo, Sussurro, Sonho, Estratégia, Controle, Instinto, Presságio, Alerta"
+      placeholder: "1ª Palavra, 2ª Palavra, 3ª Palavra, 4ª Palavra, 5ª Palavra"
     validations:
       required: true

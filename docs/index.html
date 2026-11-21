@@ -54,7 +54,7 @@
     }
     h2 { margin-top: 0; font-size: 1.15rem; }
     label { display: block; font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
-    input[type="text"], textarea, select {
+    input[type="text"], textarea {
       width: 100%;
       background: #0f131d;
       border: 1px solid var(--border);
@@ -67,7 +67,7 @@
     textarea { min-height: 70px; resize: vertical; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
-    button, .btn {
+    button {
       display: inline-block;
       background: var(--accent);
       color: #fff;
@@ -77,11 +77,8 @@
       font-weight: 600;
       font-size: 0.95rem;
       cursor: pointer;
-      text-decoration: none;
-      text-align: center;
     }
-    button:hover, .btn:hover { background: var(--accent-hover); }
-    button:disabled { opacity: 0.45; cursor: not-allowed; }
+    button:hover { background: var(--accent-hover); }
     .btn-secondary { background: #252d42; }
     .btn-secondary:hover { background: #333f5c; }
     .option-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
@@ -99,14 +96,15 @@
     .option-item:hover { border-color: #475569; }
     .words-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(145px, 1fr));
       gap: 10px;
       margin-top: 8px;
     }
     .word-chip {
+      position: relative;
       background: #0f131d;
       border: 1px solid var(--border);
-      padding: 10px;
+      padding: 10px 12px;
       border-radius: 8px;
       text-align: center;
       cursor: pointer;
@@ -117,6 +115,15 @@
       background: rgba(230, 36, 41, 0.18);
       border-color: var(--accent);
       color: #fff;
+    }
+    .order-badge {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.72rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      margin-left: 6px;
     }
     table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
     th, td {
@@ -143,22 +150,22 @@
     <header>
       <div>
         <h1>Protocolo de Despertar (d616)</h1>
-        <div style="color: var(--muted); font-size: 0.9rem;">Sistema Integrado ao GitHub Actions — Sem Repetição</div>
+        <div style="color: var(--muted); font-size: 0.9rem;">Pontuação 4 Casas Decimais + Ordem de Palavras (GitHub Actions)</div>
       </div>
       <span id="sessionBadge" class="badge">Carregando estado...</span>
     </header>
 
-    <!-- Painel ao Vivo de Vagas -->
+    <!-- Painel ao Vivo de Vagas (SEM EXPOR CÓDIGOS) -->
     <div class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
-        <h2 style="margin:0;">Status das Vagas (GitHub Actions)</h2>
+        <h2 style="margin:0;">Progresso da Mesa (Códigos Privados)</h2>
         <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="loadPublicState()">Atualizar</button>
       </div>
       <div style="overflow-x:auto;">
         <table>
           <thead>
             <tr>
-              <th>Código</th>
+              <th>Vaga</th>
               <th>Status</th>
               <th>Jogador</th>
               <th>Personagem Civil</th>
@@ -172,12 +179,15 @@
       </div>
     </div>
 
-    <!-- Entrada de Código -->
+    <!-- Entrada de Código Secreto Individual -->
     <div class="card">
-      <h2>1. Digite seu Código de Vaga</h2>
+      <h2>1. Digite seu Código Individual Secreto</h2>
+      <p style="color:var(--muted); font-size:0.86rem; margin-top:-6px;">
+        Informe o código enviado em particular pelo Mestre (validado via hash SHA-256).
+      </p>
       <div style="display:flex; gap:10px;">
-        <input type="text" id="slotCodeInput" placeholder="Ex.: X616-VQV2" style="margin:0; text-transform:uppercase;" />
-        <button onclick="validateCode()">Acessar Vaga</button>
+        <input type="text" id="slotCodeInput" placeholder="Digite seu código individual..." style="margin:0; text-transform:uppercase;" />
+        <button onclick="validateCode()">Desbloquear</button>
       </div>
       <div id="codeMsg" style="margin-top:10px; font-size:0.9rem;"></div>
     </div>
@@ -188,7 +198,7 @@
       <div class="grid-2">
         <div>
           <label>Seu Nome (Jogador) *</label>
-          <input type="text" id="playerName" placeholder="Ex.: Marcelo" />
+          <input type="text" id="playerName" placeholder="Seu nome" />
         </div>
         <div>
           <label>Nome Civil do Personagem *</label>
@@ -213,20 +223,18 @@
       <h2>3. Teste Cego de Reação e Psique</h2>
       <div id="questionsContainer"></div>
 
-      <h2>4. Sincronização de Palavras (Escolha exatamente 5)</h2>
+      <h2>4. Sincronização de Palavras (Escolha 5 EM ORDEM: 1ª a 5ª)</h2>
       <p style="color:var(--muted); font-size:0.88rem; margin-top:-6px;">
-        Selecionadas: <strong id="wordCountLabel">0 / 5</strong>
+        A <strong>ordem em que você clica</strong> (1ª, 2ª, 3ª, 4ª e 5ª) altera a pontuação de 4 casas decimais e define qualquer desempate!
+        <br/>Ordem atual: <strong id="wordOrderPreview">nenhuma selecionada (0/5)</strong>
       </p>
       <div id="wordsContainer" class="words-grid"></div>
 
-      <div style="margin-top:24px; display:flex; flex-wrap:wrap; gap:12px;">
-        <button id="submitIssueBtn" onclick="submitViaGitHubIssue()">
+      <div style="margin-top:24px;">
+        <button onclick="submitViaGitHubIssue()">
           Registrar no GitHub Actions (1 Clique)
         </button>
       </div>
-      <p style="color:var(--muted); font-size:0.82rem; margin-top:10px;">
-        Ao clicar, o formulário pré-preenchido do GitHub será aberto. Basta clicar no botão verde <strong>"Submit new issue"</strong> para disparar o workflow <code>awakening-issue.yml</code> que trava sua vaga sem repetição.
-      </p>
     </div>
 
     <!-- Resultado Revelado -->
@@ -240,13 +248,22 @@
     const REPO = "GoobinEXE/marvel-convergencia-macabra";
     let publicState = null;
     let activeSlot = null;
-    let selectedWords = new Set();
+    let activeRawCode = "";
+    let orderedWords = []; // preserva ordem 1ª a 5ª
 
     const ID_TO_LETTER = {
       q1_melee: "A", q1_agility: "B", q1_ego: "C", q1_logic: "D", q1_vigilance: "E",
       q2_melee: "A", q2_agility: "B", q2_ego: "C", q2_logic: "D", q2_vigilance: "E",
       q3_melee: "A", q3_agility: "B", q3_ego: "C", q3_logic: "D", q3_vigilance: "E"
     };
+
+    async function sha256Browser(text) {
+      const data = new TextEncoder().encode(text.trim().toUpperCase());
+      const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+      return Array.from(new Uint8Array(hashBuffer))
+        .map((b) => b.toString(16).padStart(2, "0"))
+        .join("");
+    }
 
     async function loadPublicState() {
       try {
@@ -265,30 +282,33 @@
 
       const tbody = document.getElementById("slotsTableBody");
       tbody.innerHTML = "";
-      for (const slot of Object.values(publicState.slots)) {
+      for (const item of publicState.publicSlotList) {
         const tr = document.createElement("tr");
         const stClass =
-          slot.status === "revealed" ? "st-revealed" :
-          slot.status === "submitted" ? "st-submitted" : "st-pending";
+          item.status === "revealed" ? "st-revealed" :
+          item.status === "submitted" ? "st-submitted" : "st-pending";
         const stLabel =
-          slot.status === "revealed" ? "REVELADO" :
-          slot.status === "submitted" ? "TRAVADO / AGUARDANDO" : "DISPONÍVEL";
+          item.status === "revealed" ? "REVELADO" :
+          item.status === "submitted" ? "TRAVADO / AGUARDANDO" : "DISPONÍVEL";
 
         tr.innerHTML = `
-          <td><span class="code-tag">${slot.slotCode}</span></td>
+          <td><strong>${item.slotLabel}</strong></td>
           <td><span class="status-pill ${stClass}">${stLabel}</span></td>
-          <td>${slot.playerName || "—"}</td>
-          <td>${slot.civilName || "—"}</td>
-          <td>${slot.result ? `<strong>${slot.result.title}</strong> (${slot.result.originLabel})` : "—"}</td>
+          <td>${item.playerName || "—"}</td>
+          <td>${item.civilName || "—"}</td>
+          <td>${item.resultTitle ? `<strong>${item.resultTitle}</strong>` : "—"}</td>
         `;
         tbody.appendChild(tr);
       }
     }
 
-    function validateCode() {
+    async function validateCode() {
       if (!publicState) return;
-      const code = document.getElementById("slotCodeInput").value.trim().toUpperCase();
-      const slot = publicState.slots[code];
+      const rawCode = document.getElementById("slotCodeInput").value.trim().toUpperCase();
+      if (!rawCode) return;
+
+      const hash = await sha256Browser(rawCode);
+      const slot = publicState.slotsByHash?.[hash];
       const msgEl = document.getElementById("codeMsg");
       const quizEl = document.getElementById("quizSection");
       const resEl = document.getElementById("resultSection");
@@ -298,14 +318,16 @@
 
       if (!slot) {
         msgEl.style.color = "#f87171";
-        msgEl.textContent = "Código inválido nesta sessão. Confira na tabela acima.";
+        msgEl.textContent = "Código inválido. Verifique o código individual enviado pelo Mestre.";
         return;
       }
 
       activeSlot = slot;
+      activeRawCode = rawCode;
+
       if (slot.status === "revealed" && slot.result) {
         msgEl.style.color = "#10b981";
-        msgEl.textContent = `Código ${code} finalizado! Veja seu dossiê abaixo.`;
+        msgEl.textContent = `${slot.slotLabel} finalizada! Confira seu dossiê abaixo.`;
         renderResult(slot);
         resEl.classList.remove("hidden");
         return;
@@ -313,20 +335,40 @@
 
       if (slot.locked) {
         msgEl.style.color = "#f59e0b";
-        msgEl.textContent = `O código ${code} (${slot.playerName}) já enviou as respostas e está travado aguardando a convergência dos demais jogadores.`;
+        msgEl.textContent = `Sua vaga (${slot.slotLabel} — ${slot.playerName}) já foi registrada e travada. Aguardando os demais jogadores para convergência.`;
         return;
       }
 
       msgEl.style.color = "#10b981";
-      msgEl.textContent = `Código ${code} disponível! Preencha o teste abaixo.`;
+      msgEl.textContent = `${slot.slotLabel} desbloqueada! Preencha sua identidade civil, as 3 perguntas e escolha 5 palavras em ordem.`;
       renderBlindQuiz(slot.blindQuiz);
       quizEl.classList.remove("hidden");
     }
 
-    function renderBlindQuiz(quiz) {
-      selectedWords.clear();
-      document.getElementById("wordCountLabel").textContent = "0 / 5";
+    function updateWordChipsUI() {
+      const chips = document.querySelectorAll(".word-chip");
+      chips.forEach((chip) => {
+        const label = chip.dataset.word;
+        const idx = orderedWords.indexOf(label);
+        if (idx !== -1) {
+          chip.classList.add("selected");
+          chip.innerHTML = `${label} <span class="order-badge">${idx + 1}ª</span>`;
+        } else {
+          chip.classList.remove("selected");
+          chip.textContent = label;
+        }
+      });
 
+      const preview = document.getElementById("wordOrderPreview");
+      if (orderedWords.length === 0) {
+        preview.textContent = "nenhuma selecionada (0/5)";
+      } else {
+        preview.textContent = `${orderedWords.map((w, i) => `${i + 1}ª ${w}`).join(" → ")} (${orderedWords.length}/5)`;
+      }
+    }
+
+    function renderBlindQuiz(quiz) {
+      orderedWords = [];
       const qContainer = document.getElementById("questionsContainer");
       qContainer.innerHTML = "";
       quiz.questions.forEach((q, idx) => {
@@ -352,20 +394,21 @@
       quiz.words.forEach((w) => {
         const chip = document.createElement("div");
         chip.className = "word-chip";
+        chip.dataset.word = w.label;
         chip.textContent = w.label;
         chip.onclick = () => {
-          if (selectedWords.has(w.label)) {
-            selectedWords.delete(w.label);
-            chip.classList.remove("selected");
+          const idx = orderedWords.indexOf(w.label);
+          if (idx !== -1) {
+            orderedWords.splice(idx, 1);
           } else {
-            if (selectedWords.size >= 5) return;
-            selectedWords.add(w.label);
-            chip.classList.add("selected");
+            if (orderedWords.length >= 5) return;
+            orderedWords.push(w.label);
           }
-          document.getElementById("wordCountLabel").textContent = `${selectedWords.size} / 5`;
+          updateWordChipsUI();
         };
         wContainer.appendChild(chip);
       });
+      updateWordChipsUI();
     }
 
     function renderResult(slot) {
@@ -373,10 +416,12 @@
       const attrs = Object.entries(r.attributes)
         .map(([k, v]) => `<span class="code-tag">${k.toUpperCase()}: ${v} (Def ${10 + v})</span>`)
         .join(" ");
+      const posStr = (r.wordPositions || []).map((p) => `${p}ª`).join(", ") || "nenhuma";
 
       document.getElementById("resultContent").innerHTML = `
         <p><strong>Jogador:</strong> ${slot.playerName} | <strong>Personagem Civil:</strong> ${slot.civilName}</p>
         <p><strong>Ficha Atribuída:</strong> ${r.slotLabel} — <strong>${r.title}</strong></p>
+        <p><strong>Pontuação Final (4 Casas Decimais):</strong> <span class="code-tag">${r.affinityScoreFormatted} pts</span> (${r.wordHitsCount} palavra(s) sincronizada(s) nas posições: ${posStr})</p>
         <p><strong>Origem:</strong> ${r.originLabel} | <strong>Foco Principal:</strong> ${r.focusAttribute} | <strong>Rank:</strong> ${r.rank}</p>
         <p><strong>Health:</strong> ${r.health} (DR ${r.healthDR}) | <strong>Focus:</strong> ${r.focus} | <strong>Karma:</strong> ${r.karma} | <strong>Iniciativa:</strong> +${r.initiative}</p>
         <p><strong>Atributos M.A.R.V.E.L.:</strong><br/>${attrs}</p>
@@ -388,7 +433,7 @@
     }
 
     function submitViaGitHubIssue() {
-      if (!activeSlot) return;
+      if (!activeSlot || !activeRawCode) return;
       const playerName = document.getElementById("playerName").value.trim();
       const civilName = document.getElementById("civilName").value.trim();
       const civilAge = document.getElementById("civilAge").value.trim();
@@ -400,19 +445,19 @@
       const q2El = document.querySelector('input[name="q2"]:checked');
       const q3El = document.querySelector('input[name="q3"]:checked');
 
-      if (!playerName || !civilName || !q1El || !q2El || !q3El || selectedWords.size !== 5) {
-        alert("Preencha seu nome, nome civil, as 3 perguntas e escolha exatamente 5 palavras.");
+      if (!playerName || !civilName || !q1El || !q2El || !q3El || orderedWords.length !== 5) {
+        alert("Preencha seu nome, nome civil, as 3 perguntas e escolha exatamente 5 palavras em ordem.");
         return;
       }
 
       const l1 = ID_TO_LETTER[q1El.value];
       const l2 = ID_TO_LETTER[q2El.value];
       const l3 = ID_TO_LETTER[q3El.value];
-      const wordsCsv = [...selectedWords].join(", ");
+      const wordsCsv = orderedWords.join(", ");
 
       const body = [
         `### Código da Vaga`,
-        activeSlot.slotCode,
+        activeRawCode,
         ``,
         `### Nome do Jogador`,
         playerName,
@@ -441,11 +486,11 @@
         `### 3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?`,
         l3,
         ``,
-        `### 4. Sincronização de Palavras (Escolha exatamente 5 separadas por vírgula)`,
+        `### 4. Sincronização de Palavras (Escolha exatamente 5 EM ORDEM de importância, separadas por vírgula)`,
         wordsCsv
       ].join("\n");
 
-      const title = `[AWAKEN] ${activeSlot.slotCode} - ${playerName}`;
+      const title = `[AWAKEN] ${activeSlot.slotLabel} - ${playerName}`;
       const url = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
       window.open(url, "_blank");
     }

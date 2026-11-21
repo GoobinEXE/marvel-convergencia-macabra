@@ -1,23 +1,32 @@
 import { ARCHETYPES } from "../data/archetypes.js";
-import { buildBlindQuizForSlot } from "./scoring.js";
+import { buildBlindQuizForSeed, formatScore4 } from "./scoring.js";
 
 /**
- * Gera o espelho público seguro (state/public-state.json) para o Limbo OS ler.
- * Remove masterCode, respostas brutas e pontuações internas antes da revelação.
+ * Gera o espelho público seguro (state/public-state.json e docs/public-state.json).
+ * NUNCA expõe os códigos das vagas em texto puro — indexa apenas por codeHash (SHA-256)
+ * e rótulos anônimos ("Vaga #1" .. "Vaga #5").
  */
 export function buildPublicState(session) {
-  const slotsPublic = {};
+  const slotsByHash = {};
+  const publicSlotList = [];
 
-  for (const [code, slot] of Object.entries(session.slots)) {
+  for (const slot of Object.values(session.slots)) {
     const assigned = slot.assignedArchetypeId ? ARCHETYPES[slot.assignedArchetypeId] : null;
-    slotsPublic[code] = {
-      slotCode: code,
+    const scoreFormatted =
+      typeof slot.assignedAffinityScore === "number"
+        ? formatScore4(slot.assignedAffinityScore)
+        : null;
+
+    const entry = {
+      slotId: slot.slotId,
+      slotLabel: `Vaga #${slot.slotNumber}`,
+      codeHash: slot.codeHash,
       status: slot.status,
       locked: slot.locked,
       playerName: slot.civilIdentity?.playerName || null,
       civilName: slot.civilIdentity?.civilName || null,
       submittedAt: slot.submittedAt,
-      blindQuiz: slot.locked ? null : buildBlindQuizForSlot(code),
+      blindQuiz: slot.locked ? null : buildBlindQuizForSeed(slot.codeHash),
       result:
         slot.status === "revealed" && assigned
           ? {
@@ -41,15 +50,29 @@ export function buildPublicState(session) {
               customizableFields: assigned.customizableFields,
               obsidianFile: assigned.obsidianFile,
               affinityScore: slot.assignedAffinityScore,
+              affinityScoreFormatted: scoreFormatted,
+              wordHitsCount: slot.assignedWordHitsCount ?? 0,
+              wordPositions: slot.assignedWordPositions ?? [],
               isUnexpectedAwakening: slot.isUnexpectedAwakening,
             }
           : null,
     };
+
+    slotsByHash[slot.codeHash] = entry;
+    publicSlotList.push({
+      slotId: entry.slotId,
+      slotLabel: entry.slotLabel,
+      status: entry.status,
+      locked: entry.locked,
+      playerName: entry.playerName,
+      civilName: entry.civilName,
+      resultTitle: entry.result ? `${entry.result.title} (${scoreFormatted} pts)` : null,
+    });
   }
 
-  const totalSlots = Object.keys(session.slots).length;
-  const submittedCount = Object.values(session.slots).filter((s) => s.locked).length;
-  const revealedCount = Object.values(session.slots).filter((s) => s.status === "revealed").length;
+  const totalSlots = publicSlotList.length;
+  const submittedCount = publicSlotList.filter((s) => s.locked).length;
+  const revealedCount = publicSlotList.filter((s) => s.status === "revealed").length;
 
   return {
     sessionId: session.sessionId,
@@ -65,12 +88,13 @@ export function buildPublicState(session) {
       revealedCount,
       remainingArchetypesCount: session.availablePool.length,
     },
-    slots: slotsPublic,
+    publicSlotList,
+    slotsByHash,
   };
 }
 
 /**
- * Gera painel visual em Markdown (state/status-board.md) e para o GitHub Actions Summary.
+ * Gera painel visual em Markdown (state/status-board.md) SEM listar os códigos secretos.
  */
 export function renderStatusBoard(session) {
   const slots = Object.values(session.slots);
@@ -83,12 +107,14 @@ export function renderStatusBoard(session) {
     `* **Sessão:** \`${session.sessionId}\``,
     `* **Modo:** \`${session.mode}\` | **Convergência Concluída:** \`${session.converged ? "SIM" : "NÃO"}\` | **Versão:** \`v${session.version}\``,
     `* **Progresso:** **${submittedCount}/${slots.length}** responderam (**${pendingCount}** pendentes) | **Fichas livres no pool:** ${session.availablePool.length}`,
+    `* **Sistema de Pontuação:** Determinístico com **4 casas decimais** + desempate por quantidade e ordem das 5 palavras (1ª a 5ª escolha, dentre 15 palavras).`,
+    `* **Privacidade:** Códigos individuais protegidos por hash SHA-256 (não listados publicamente).`,
     `* **Última atualização:** \`${session.updatedAt}\``,
     ``,
-    `## Status por Código de Vaga`,
+    `## Status das Vagas (Códigos Ocultos)`,
     ``,
-    `| Código | Status | Jogador | Nome Civil | Ficha Atribuída | Afinidade |`,
-    `| :--- | :---: | :--- | :--- | :--- | :---: |`,
+    `| Vaga | Status | Jogador | Nome Civil | Ficha Atribuída | Pontuação (4 casas) | Palavras da Ficha (Ordem) |`,
+    `| :--- | :---: | :--- | :--- | :--- | :---: | :---: |`,
   ];
 
   for (const slot of slots) {
@@ -96,7 +122,7 @@ export function renderStatusBoard(session) {
       slot.status === "revealed"
         ? "REVELADO"
         : slot.status === "submitted"
-          ? "AGUARDANDO"
+          ? "TRAVADO / AGUARDANDO"
           : "PENDENTE";
     const playerName = slot.civilIdentity?.playerName || "—";
     const civilName = slot.civilIdentity?.civilName || "—";
@@ -105,10 +131,18 @@ export function renderStatusBoard(session) {
       : "—";
     const affinity =
       typeof slot.assignedAffinityScore === "number"
-        ? `${slot.assignedAffinityScore} pts${slot.isUnexpectedAwakening ? " *(Despertar Inesperado)*" : ""}`
+        ? `**${formatScore4(slot.assignedAffinityScore)}**${slot.isUnexpectedAwakening ? " *(Inesperado)*" : ""}`
+        : "—";
+    const wordsDetail =
+      slot.assignedArchetypeId && Array.isArray(slot.assignedWordPositions)
+        ? slot.assignedWordPositions.length > 0
+          ? `${slot.assignedWordPositions.length} acerto(s) (${slot.assignedWordPositions.map((p) => `${p}ª`).join(", ")})`
+          : "0 acertos"
         : "—";
 
-    lines.push(`| \`${slot.slotCode}\` | ${statusLabel} | ${playerName} | ${civilName} | ${archLabel} | ${affinity} |`);
+    lines.push(
+      `| **Vaga #${slot.slotNumber}** | ${statusLabel} | ${playerName} | ${civilName} | ${archLabel} | ${affinity} | ${wordsDetail} |`
+    );
   }
 
   lines.push(``);
@@ -133,15 +167,14 @@ export function renderStatusBoard(session) {
   return lines.join("\n");
 }
 
-/**
- * Gera um resumo individual em Markdown pronto para colar no Obsidian após revelação.
- */
 export function renderPlayerExportMarkdown(slot) {
   const arch = ARCHETYPES[slot.assignedArchetypeId];
   if (!arch) {
-    throw new Error(`Slot ${slot.slotCode} ainda não possui ficha atribuída.`);
+    throw new Error(`Vaga #${slot.slotNumber} ainda não possui ficha atribuída.`);
   }
   const civil = slot.civilIdentity || {};
+  const scoreFormatted = formatScore4(slot.assignedAffinityScore || 0);
+  const posList = (slot.assignedWordPositions || []).map((p) => `${p}ª`).join(", ") || "nenhuma";
 
   return [
     `---`,
@@ -151,15 +184,16 @@ export function renderPlayerExportMarkdown(slot) {
     `  - ${arch.origin === "Mutant" ? "mutante" : "genetica-alterada"}`,
     `  - ${arch.id}`,
     `  - rank-4`,
-    `slot_code: ${slot.slotCode}`,
+    `vaga: Vaga #${slot.slotNumber}`,
     `jogador: ${civil.playerName || "A definir"}`,
     `nome_civil: ${civil.civilName || "A definir"}`,
     `origem: ${arch.origin}`,
     `foco: ${arch.focusAttribute}`,
+    `pontuacao_afinidade: ${scoreFormatted}`,
     `rank: 4`,
     `---`,
     ``,
-    `# ${civil.civilName || civil.playerName || slot.slotCode} — ${arch.title}`,
+    `# ${civil.civilName || civil.playerName || `Vaga #${slot.slotNumber}`} — ${arch.title}`,
     ``,
     `## Identidade Civil (Fase 1)`,
     `* **Jogador:** ${civil.playerName || "—"}`,
@@ -169,11 +203,12 @@ export function renderPlayerExportMarkdown(slot) {
     `* **Aparência Visual:** ${civil.visualAppearance || "—"}`,
     `* **Histórico Pré-Poderes:** ${civil.prePowerHistory || "—"}`,
     ``,
-    `## Resultado do Despertar (d616)`,
+    `## Resultado do Despertar (d616 — Pontuação 4 Casas Decimais)`,
     `* **Ficha Mecânica Base:** [[${arch.slotLabel}]]`,
     `* **Origem:** ${arch.originLabel}`,
-    `* **Afinidade Calculada:** ${slot.assignedAffinityScore} pts${slot.isUnexpectedAwakening ? " *(Despertar Inesperado)*" : ""}`,
-    `* **Palavras Sincronizadas:** ${(slot.selectedWordLabels || []).join(", ")}`,
+    `* **Pontuação Final na Ficha:** **${scoreFormatted} pts**`,
+    `* **Palavras da Ficha Acertadas:** ${slot.assignedWordHitsCount || 0} (posições: ${posList})`,
+    `* **5 Palavras Escolhidas (em ordem 1ª → 5ª):** ${(slot.selectedWordLabels || []).map((w, i) => `${i + 1}ª ${w}`).join(" | ")}`,
     `* **Health:** ${arch.health} | **Focus:** ${arch.focus} | **Karma:** ${arch.karma} | **Iniciativa:** +${arch.initiative}`,
     `* **Traits Bônus:** ${arch.traits.join(", ")}`,
     `* **Power Sets:** ${arch.powerSets.join(" + ")}`,

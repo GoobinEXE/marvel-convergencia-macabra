@@ -2,3 +2,4 @@
 .obsidian/
 node_modules/
 *.log
+state/gm-codes.private.md
