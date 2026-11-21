@@ -2,7 +2,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { ARCHETYPE_IDS } from "../data/quizConfig.js";
-import { generateUniqueCodes, sha256Hex } from "../engine/prng.js";
+import { generateAccessCode, generateUniqueCodes, sha256Hex } from "../engine/prng.js";
 import { resolveStateDir, saveSessionAndViews } from "./stateIO.mjs";
 
 const campaignName = process.env.CAMPAIGN_NAME || "Convergência Macabra";
@@ -11,6 +11,8 @@ const maxPlayers = Math.min(5, Math.max(1, Number(process.env.MAX_PLAYERS || 5))
 const prefix = (process.env.CODE_PREFIX || "X616").replace(/[^A-Za-z0-9]/g, "").slice(0, 8) || "X616";
 
 const rawCodes = generateUniqueCodes(maxPlayers, prefix);
+const rawMasterCode = generateAccessCode("GM", 6);
+const masterCodeHash = sha256Hex(rawMasterCode);
 const now = new Date().toISOString();
 
 const slots = {};
@@ -44,6 +46,7 @@ rawCodes.forEach((rawCode, idx) => {
 const session = {
   sessionId: crypto.randomUUID(),
   campaignName,
+  masterCodeHash,
   mode,
   maxPlayers,
   version: 0,
@@ -74,6 +77,7 @@ const privateLines = [
   ``,
   `* **Sessão:** \`${session.sessionId}\``,
   `* **Gerado em:** \`${now}\``,
+  `* **Código Secreto do Mestre (desbloqueia o botão oculto de Reset no site):** \`${rawMasterCode}\``,
   ``,
   `| Vaga | Código Secreto para Enviar ao Jogador | Hash SHA-256 (público) |`,
   `| :--- | :---: | :--- |`,

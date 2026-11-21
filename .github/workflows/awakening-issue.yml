@@ -25,35 +25,51 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Processar Reset ou Submissão de Jogador
+      - name: Processar Reset (Apenas Mestre) ou Submissão de Jogador
         env:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_AUTHOR: ${{ github.event.issue.user.login }}
           REPO_NAME: ${{ github.repository }}
         run: |
           node - << 'EOF'
           import { spawnSync } from "node:child_process";
           import fs from "node:fs";
+          import { sha256Hex } from "./awakening-engine/engine/prng.js";
+          import { loadSession } from "./awakening-engine/cli/stateIO.mjs";
 
           const title = process.env.ISSUE_TITLE || "";
           const body = process.env.ISSUE_BODY || "";
+          const author = process.env.ISSUE_AUTHOR || "";
           const repo = process.env.REPO_NAME || "GoobinEXE/marvel-convergencia-macabra";
-
-          if (title.includes("[AWAKEN-RESET]")) {
-            const res = spawnSync("node", ["awakening-engine/cli/reset-session.mjs"], { encoding: "utf8" });
-            console.log(res.stdout);
-            fs.writeFileSync(
-              "/tmp/awaken_comment.md",
-              `🔄 **Respostas apagadas com sucesso!**\n\nTodas as 5 vagas voltaram para \`PENDENTE\` mantendo os mesmos códigos secretos.\n\n* Painel: https://goobinexe.github.io/marvel-convergencia-macabra/`
-            );
-            process.exit(0);
-          }
 
           function extract(heading) {
             const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
             const re = new RegExp(`### ${escaped}\\s+([\\s\\S]*?)(?=\\n### |$)`);
             const m = body.match(re);
             return m ? m[1].trim() : "";
+          }
+
+          if (title.includes("[AWAKEN-RESET]")) {
+            const session = loadSession();
+            const masterCodeInput = extract("Código do Mestre");
+            const inputHash = sha256Hex(masterCodeInput);
+
+            if (author !== "GoobinEXE" || !session.masterCodeHash || inputHash !== session.masterCodeHash) {
+              fs.writeFileSync(
+                "/tmp/awaken_comment.md",
+                `⛔ **Acesso Negado:** Apenas o Mestre (\`GoobinEXE\`) com o Código Secreto do Mestre válido pode resetar as respostas.`
+              );
+              process.exit(1);
+            }
+
+            const res = spawnSync("node", ["awakening-engine/cli/reset-session.mjs"], { encoding: "utf8" });
+            console.log(res.stdout);
+            fs.writeFileSync(
+              "/tmp/awaken_comment.md",
+              `🔄 **Respostas apagadas com sucesso pelo Mestre!**\n\nTodas as 5 vagas voltaram para \`PENDENTE\` mantendo os mesmos códigos secretos.\n\n* Painel: https://goobinexe.github.io/marvel-convergencia-macabra/`
+            );
+            process.exit(0);
           }
 
           const slotCode = extract("Código da Vaga").toUpperCase();

@@ -2,9 +2,10 @@
   "sessionId": "f78894d8-f98d-4a7e-83ee-a8c9d6954315",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 2,
+  "version": 3,
   "converged": false,
-  "updatedAt": "2026-11-21T23:22:53.746Z",
+  "updatedAt": "2026-11-21T23:26:00.177Z",
+  "masterCodeHash": "80c520975399326c81ea39c88107e73cd3d11707f993c4121e241c0d98913e0b",
   "summary": {
     "totalSlots": 5,
     "submittedCount": 0,

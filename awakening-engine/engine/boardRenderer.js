@@ -84,6 +84,7 @@ export function buildPublicState(session) {
     version: session.version,
     converged: session.converged,
     updatedAt: session.updatedAt,
+    masterCodeHash: session.masterCodeHash || null,
     summary: {
       totalSlots,
       submittedCount,

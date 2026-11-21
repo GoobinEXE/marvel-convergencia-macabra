@@ -158,13 +158,12 @@
       <span id="sessionBadge" class="badge">Carregando estado...</span>
     </header>
 
-    <!-- Painel ao Vivo de Vagas (SEM EXPOR CÓDIGOS) -->
+    <!-- Painel ao Vivo de Vagas (SEM EXPOR CÓDIGOS E SEM BOTÃO DE RESET PÚBLICO) -->
     <div class="card">
       <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px; margin-bottom:10px;">
         <h2 style="margin:0;">Progresso da Mesa & Formulários de Resposta</h2>
         <div style="display:flex; gap:8px; flex-wrap:wrap;">
           <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="loadPublicState()">Atualizar</button>
-          <button class="btn-secondary" style="padding:6px 12px; font-size:0.8rem;" onclick="resetAllResponses()">Resetar Respostas (Testar Novamente)</button>
         </div>
       </div>
       <div style="overflow-x:auto;">
@@ -197,6 +196,10 @@
         <button onclick="validateCode()">Desbloquear</button>
       </div>
       <div id="codeMsg" style="margin-top:10px; font-size:0.9rem;"></div>
+      <div id="gmAdminBox" class="hidden" style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border);">
+        <div style="color:var(--warn); font-weight:700; margin-bottom:8px;">Painel Exclusivo do Mestre Desbloqueado</div>
+        <button onclick="resetAllResponses()">Resetar Todas as Respostas (Manter Mesmos Códigos)</button>
+      </div>
     </div>
 
     <!-- Formulário Cego Embaralhado -->
@@ -256,6 +259,7 @@
     let publicState = null;
     let activeSlot = null;
     let activeRawCode = "";
+    let unlockedMasterCode = "";
     let orderedWords = [];
 
     const ID_TO_LETTER = {
@@ -314,8 +318,12 @@
     }
 
     function resetAllResponses() {
+      if (!unlockedMasterCode) return;
       const title = "[AWAKEN-RESET] Apagar respostas atuais e manter os mesmos códigos";
-      const body = "Ao clicar em **Submit new issue**, o GitHub Actions executará `awakening-reset` e limpará todas as respostas atuais, mantendo os mesmos 5 códigos secretos para você testar novamente.";
+      const body = [
+        `### Código do Mestre`,
+        unlockedMasterCode
+      ].join("\n");
       const url = `https://github.com/${REPO}/issues/new?title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
       window.open(url, "_blank");
     }
@@ -330,9 +338,19 @@
       const msgEl = document.getElementById("codeMsg");
       const quizEl = document.getElementById("quizSection");
       const resEl = document.getElementById("resultSection");
+      const gmBox = document.getElementById("gmAdminBox");
 
       quizEl.classList.add("hidden");
       resEl.classList.add("hidden");
+      gmBox.classList.add("hidden");
+
+      if (publicState.masterCodeHash && hash === publicState.masterCodeHash) {
+        unlockedMasterCode = rawCode;
+        msgEl.style.color = "#10b981";
+        msgEl.textContent = "Código do Mestre autenticado via SHA-256.";
+        gmBox.classList.remove("hidden");
+        return;
+      }
 
       if (!slot) {
         msgEl.style.color = "#f87171";
