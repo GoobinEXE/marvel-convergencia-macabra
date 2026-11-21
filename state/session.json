@@ -1,7 +1,7 @@
 {
-  "sessionId": "f3589be3-1b2e-41cc-b4cb-10d5fa613652",
+  "sessionId": "6c782be9-e1b9-4971-88ab-4d090f9fd6e6",
   "campaignName": "Convergência Macabra",
-  "masterCode": "GM-7543UE",
+  "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
   "version": 1,
@@ -14,8 +14,8 @@
     "vigilance"
   ],
   "slots": {
-    "X616-XTKF": {
-      "slotCode": "X616-XTKF",
+    "X616-VQV2": {
+      "slotCode": "X616-VQV2",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -30,8 +30,8 @@
       "isUnexpectedAwakening": false,
       "submittedAt": null
     },
-    "X616-RUBM": {
-      "slotCode": "X616-RUBM",
+    "X616-34MS": {
+      "slotCode": "X616-34MS",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -46,8 +46,8 @@
       "isUnexpectedAwakening": false,
       "submittedAt": null
     },
-    "X616-4FE9": {
-      "slotCode": "X616-4FE9",
+    "X616-FZXK": {
+      "slotCode": "X616-FZXK",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -62,8 +62,8 @@
       "isUnexpectedAwakening": false,
       "submittedAt": null
     },
-    "X616-SWJG": {
-      "slotCode": "X616-SWJG",
+    "X616-TETD": {
+      "slotCode": "X616-TETD",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -78,8 +78,8 @@
       "isUnexpectedAwakening": false,
       "submittedAt": null
     },
-    "X616-PZD8": {
-      "slotCode": "X616-PZD8",
+    "X616-YN9E": {
+      "slotCode": "X616-YN9E",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -97,11 +97,11 @@
   },
   "auditLog": [
     {
-      "at": "2026-11-21T20:55:13.678Z",
+      "at": "2026-11-21T21:00:01.384Z",
       "event": "SESSION_INIT",
-      "detail": "Sessão criada no modo 'batch' com 5 códigos (X616-XTKF, X616-RUBM, X616-4FE9, X616-SWJG, X616-PZD8)."
+      "detail": "Sessão criada no modo 'batch' com 5 códigos (X616-VQV2, X616-34MS, X616-FZXK, X616-TETD, X616-YN9E)."
     }
   ],
-  "createdAt": "2026-11-21T20:55:13.678Z",
-  "updatedAt": "2026-11-21T20:55:13.680Z"
+  "createdAt": "2026-11-21T21:00:01.384Z",
+  "updatedAt": "2026-11-21T21:00:01.385Z"
 }
