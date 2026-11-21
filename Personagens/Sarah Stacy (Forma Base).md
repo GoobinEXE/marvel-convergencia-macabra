@@ -9,11 +9,12 @@ relacionado:
   - "[[Kindred (Gabriel e Sarah Stacy)]]"
   - "[[Gabriel Stacy (Forma Base)]]"
 ---
-
+[![Sarah Stacy (Earth-616)/Gallery | Marvel Database | Fandom](https://static.wikia.nocookie.net/marveldatabase/images/b/b1/Sarah_Stacy_%28Earth-616%29_from_Spectacular_Spider-Man_Vol_2_23_002.jpg/revision/latest/scale-to-width-down/250?cb=20210512214232)![Sarah Stacy (Earth-616)/Gallery | Marvel Database | Fandom](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrX5g-5yUtvSnpiCGBDVmYkPzjlAN5E04r11-DQ8fKZA&s=10)](https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fmarvel.fandom.com%2Fwiki%2FSarah_Stacy_\(Earth-616\)%2FGallery&ved=0CBcQjRxqFwoTCND0uOqBmpgDFQAAAAAdAAAAABA5&opi=89978449)
 # Sarah Stacy (Forma Base)
 
 ## Perfil
-* **Conceito:** Forma humana aprimorada de Sarah Stacy antes da manifestação de [[Kindred (Gabriel e Sarah Stacy)]]. Mais ágil, precisa e tática que o irmão, atuando com mobilidade acrobática e ataques à distância.
+* **Aparência e Personalidade:** Cabelos loiros (lembrando muito Gwen Stacy), postura silenciosa, fria e calculista. Foca em manipulação emocional, observação e ataques cirúrgicos em vez de confronto bruto.
+* **Conceito e Legado:** Forma humana aprimorada de Sarah Stacy antes da manifestação de [[Kindred (Gabriel e Sarah Stacy)]]. Diferente do irmão, nunca assumiu identidade prévia de supervilã, mas compartilha os reflexos do Soro do Duende e a mesma instabilidade genética de clone.
 * **Escala para PC:** Ficha pronta em **Rank 2** (nível urbano). Caso um jogador queira usá-la como personagem jogável nesta mesa de **Rank 4**, adicione **+10 pontos** de atributo (teto 7), **+8 poderes** e **+2** no multiplicador base de dano.
 
 ---

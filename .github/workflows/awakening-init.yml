@@ -63,7 +63,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           rm -rf state/exports
-          git add state/
+          git add state/ docs/
           if ! git diff --staged --quiet; then
             git commit -m "chore(awakening): iniciar sessão (${{ inputs.allocation_mode }}, ${{ inputs.max_players }} jogadores)"
             git pull --rebase

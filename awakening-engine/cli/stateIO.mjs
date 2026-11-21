@@ -29,9 +29,15 @@ export function saveSessionAndViews(session, stateDir = resolveStateDir()) {
   const sessionPath = path.join(stateDir, "session.json");
   const publicPath = path.join(stateDir, "public-state.json");
   const boardPath = path.join(stateDir, "status-board.md");
+  const docsDir = path.resolve(stateDir, "../docs");
 
+  const publicJson = JSON.stringify(buildPublicState(session), null, 2) + "\n";
   fs.writeFileSync(sessionPath, JSON.stringify(session, null, 2) + "\n", "utf8");
-  fs.writeFileSync(publicPath, JSON.stringify(buildPublicState(session), null, 2) + "\n", "utf8");
+  fs.writeFileSync(publicPath, publicJson, "utf8");
+
+  if (fs.existsSync(docsDir)) {
+    fs.writeFileSync(path.join(docsDir, "public-state.json"), publicJson, "utf8");
+  }
 
   const boardMd = renderStatusBoard(session);
   fs.writeFileSync(boardPath, boardMd, "utf8");

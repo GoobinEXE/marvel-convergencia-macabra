@@ -1,0 +1,109 @@
+name: "Despertar de Poderes — Enviar Respostas (d616)"
+description: "Preencha seu código de vaga, identidade civil, 3 perguntas e 5 palavras para registrar no GitHub Actions."
+title: "[AWAKEN] Submissão de Jogador"
+labels: ["awakening-submit"]
+body:
+  - type: input
+    id: slot_code
+    attributes:
+      label: "Código da Vaga"
+      description: "Código individual enviado pelo Mestre (ex.: X616-VQV2)"
+      placeholder: "X616-XXXX"
+    validations:
+      required: true
+
+  - type: input
+    id: player_name
+    attributes:
+      label: "Nome do Jogador"
+      placeholder: "Seu nome"
+    validations:
+      required: true
+
+  - type: input
+    id: civil_name
+    attributes:
+      label: "Nome Civil do Personagem"
+      placeholder: "Nome da pessoa normal antes dos poderes"
+    validations:
+      required: true
+
+  - type: input
+    id: civil_age
+    attributes:
+      label: "Idade"
+      placeholder: "Ex.: 25"
+    validations:
+      required: false
+
+  - type: input
+    id: civil_occupation
+    attributes:
+      label: "Ocupação Civil"
+      placeholder: "Ex.: Boxeador, Jornalista, Cientista, Estudante..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: visual_appearance
+    attributes:
+      label: "Aparência Visual (Pessoa Normal)"
+      placeholder: "Descreva como seu personagem se parece antes de receber poderes"
+    validations:
+      required: false
+
+  - type: textarea
+    id: pre_power_history
+    attributes:
+      label: "Histórico Pré-Poderes"
+      placeholder: "Resumo da vida civil e personalidade"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: answer_q1
+    attributes:
+      label: "1. Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?"
+      options:
+        - "A) Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
+        - "B) Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
+        - "C) Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
+        - "D) Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
+        - "E) Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: answer_q2
+    attributes:
+      label: "2. O que mais marcou a história passada do seu personagem até hoje?"
+      options:
+        - "A) Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
+        - "B) Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
+        - "C) Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
+        - "D) Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
+        - "E) Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: answer_q3
+    attributes:
+      label: "3. Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?"
+      options:
+        - "A) O escudo da linha de frente que não recua."
+        - "B) O especialista ágil que resolve alvos difíceis sem se expor."
+        - "C) O infiltrador ou distraidor que controla o que os outros percebem."
+        - "D) O estrategista que monta o plano e protege os companheiros."
+        - "E) O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
+    validations:
+      required: true
+
+  - type: input
+    id: selected_words
+    attributes:
+      label: "4. Sincronização de Palavras (Escolha exatamente 5 separadas por vírgula)"
+      description: "Opções disponíveis: Névoa, Precisão, Impacto, Sonho, Instinto, Segredo, Fuga, Resistência, Presságio, Estratégia"
+      placeholder: "Névoa, Precisão, Impacto, Sonho, Instinto"
+    validations:
+      required: true

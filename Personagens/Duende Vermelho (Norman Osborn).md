@@ -11,7 +11,7 @@ aparicoes:
 
 # Duende Vermelho (Norman Osborn)
 
-![[duende_vermelho.webp]]
+[![Você sabe sobre o Duende Vermelho?... É o Norman Osborn, mas com os poderes  do Duende Verde e do Carnificina, tipo, dá pra imaginar isso!... : r/Marvel](https://i.redd.it/bk16eyhr5zqd1.png)](https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.reddit.com%2Fr%2FMarvel%2Fcomments%2F1fp7ef3%2Fdo_you_know_about_the_red_goblin_it_is_norman%2F%3Ftl%3Dpt-br&ved=0CBcQjRxqFwoTCICh0YWCmpgDFQAAAAAdAAAAABA5&opi=89978449)
 
 ## Perfil
 * **Histórico Oculto:** Após perder os poderes de Duende e culpar Peter Parker pela perda e pela morte de Gwen Stacy, Norman lançou os gêmeos contra o Aranha, foi atrás do simbionte **Carnificina** e recuperou o soro do Duende Verde.

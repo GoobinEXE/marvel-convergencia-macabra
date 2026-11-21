@@ -10,7 +10,7 @@ aparicoes:
   - "[[Ato 3 - Colapso Dimensional]]"
   - "[[Epílogo - A Incursão do Doutor Destino]]"
 ---
-
+![[Girl_hugging_plush_dinosaur_toy_c1de35e7.jpg]]
 # Brie (Ser Nexus)
 
 ## Perfil
