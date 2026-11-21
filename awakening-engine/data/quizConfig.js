@@ -27,13 +27,13 @@ export const SCORING_RULES = {
 export const QUESTIONS = [
   {
     id: "q1",
-    prompt: "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+    prompt: "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
     weights: { primary: 2.3500, secondary: 0.8500, tertiary: 0.3125 },
     options: [
       {
         id: "q1_melee",
         letter: "A",
-        text: "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco.",
+        text: "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas.",
         primary: "melee",
         secondary: "vigilance",
         tertiary: "ego",
@@ -41,7 +41,7 @@ export const QUESTIONS = [
       {
         id: "q1_agility",
         letter: "B",
-        text: "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão.",
+        text: "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro.",
         primary: "agility",
         secondary: "logic",
         tertiary: "vigilance",
@@ -49,7 +49,7 @@ export const QUESTIONS = [
       {
         id: "q1_ego",
         letter: "C",
-        text: "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele.",
+        text: "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar.",
         primary: "ego",
         secondary: "agility",
         tertiary: "logic",
@@ -57,7 +57,7 @@ export const QUESTIONS = [
       {
         id: "q1_logic",
         letter: "D",
-        text: "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar.",
+        text: "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular.",
         primary: "logic",
         secondary: "ego",
         tertiary: "agility",
@@ -65,7 +65,7 @@ export const QUESTIONS = [
       {
         id: "q1_vigilance",
         letter: "E",
-        text: "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar.",
+        text: "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda.",
         primary: "vigilance",
         secondary: "melee",
         tertiary: "agility",
@@ -74,13 +74,13 @@ export const QUESTIONS = [
   },
   {
     id: "q2",
-    prompt: "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+    prompt: "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
     weights: { primary: 2.1500, secondary: 0.6500, tertiary: 0.1875 },
     options: [
       {
         id: "q2_melee",
         letter: "A",
-        text: "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar.",
+        text: "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado.",
         primary: "melee",
         secondary: "vigilance",
         tertiary: "agility",
@@ -88,7 +88,7 @@ export const QUESTIONS = [
       {
         id: "q2_agility",
         letter: "B",
-        text: "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada.",
+        text: "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez.",
         primary: "agility",
         secondary: "vigilance",
         tertiary: "ego",
@@ -96,7 +96,7 @@ export const QUESTIONS = [
       {
         id: "q2_ego",
         letter: "C",
-        text: "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa.",
+        text: "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos.",
         primary: "ego",
         secondary: "logic",
         tertiary: "vigilance",
@@ -104,7 +104,7 @@ export const QUESTIONS = [
       {
         id: "q2_logic",
         letter: "D",
-        text: "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar.",
+        text: "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo.",
         primary: "logic",
         secondary: "ego",
         tertiary: "melee",
@@ -112,7 +112,7 @@ export const QUESTIONS = [
       {
         id: "q2_vigilance",
         letter: "E",
-        text: "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar.",
+        text: "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente.",
         primary: "vigilance",
         secondary: "logic",
         tertiary: "melee",
@@ -121,13 +121,13 @@ export const QUESTIONS = [
   },
   {
     id: "q3",
-    prompt: "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+    prompt: "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
     weights: { primary: 1.9500, secondary: 0.4500, tertiary: 0.1250 },
     options: [
       {
         id: "q3_melee",
         letter: "A",
-        text: "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda.",
+        text: "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física.",
         primary: "melee",
         secondary: "ego",
         tertiary: "vigilance",
@@ -135,7 +135,7 @@ export const QUESTIONS = [
       {
         id: "q3_agility",
         letter: "B",
-        text: "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal.",
+        text: "Sair de última hora para buscar gelo e bebida antes que o mercado feche.",
         primary: "agility",
         secondary: "melee",
         tertiary: "logic",
@@ -143,7 +143,7 @@ export const QUESTIONS = [
       {
         id: "q3_ego",
         letter: "C",
-        text: "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar.",
+        text: "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa.",
         primary: "ego",
         secondary: "agility",
         tertiary: "vigilance",
@@ -151,7 +151,7 @@ export const QUESTIONS = [
       {
         id: "q3_logic",
         letter: "D",
-        text: "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam.",
+        text: "Fazer a lista do que falta, dividir a conta no final e organizar os horários.",
         primary: "logic",
         secondary: "vigilance",
         tertiary: "ego",
@@ -159,7 +159,7 @@ export const QUESTIONS = [
       {
         id: "q3_vigilance",
         letter: "E",
-        text: "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro.",
+        text: "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo.",
         primary: "vigilance",
         secondary: "agility",
         tertiary: "logic",

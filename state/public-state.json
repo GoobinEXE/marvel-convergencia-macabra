@@ -2,9 +2,9 @@
   "sessionId": "f78894d8-f98d-4a7e-83ee-a8c9d6954315",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 4,
+  "version": 5,
   "converged": false,
-  "updatedAt": "2026-11-21T23:31:49.901Z",
+  "updatedAt": "2026-11-21T23:36:10.656Z",
   "masterCodeHash": "80c520975399326c81ea39c88107e73cd3d11707f993c4121e241c0d98913e0b",
   "summary": {
     "totalSlots": 5,
@@ -87,79 +87,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+            "prompt": "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
             "options": [
               {
                 "id": "q1_vigilance",
-                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
+                "text": "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda."
               },
               {
                 "id": "q1_logic",
-                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
+                "text": "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular."
               },
               {
                 "id": "q1_ego",
-                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
+                "text": "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar."
               },
               {
                 "id": "q1_agility",
-                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
+                "text": "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro."
               },
               {
                 "id": "q1_melee",
-                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
+                "text": "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+            "prompt": "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
             "options": [
               {
                 "id": "q2_vigilance",
-                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
+                "text": "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente."
               },
               {
                 "id": "q2_agility",
-                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
+                "text": "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez."
               },
               {
                 "id": "q2_logic",
-                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
+                "text": "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
+                "text": "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado."
               },
               {
                 "id": "q2_ego",
-                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
+                "text": "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+            "prompt": "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
             "options": [
               {
                 "id": "q3_logic",
-                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
+                "text": "Fazer a lista do que falta, dividir a conta no final e organizar os horários."
               },
               {
                 "id": "q3_ego",
-                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
+                "text": "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa."
               },
               {
                 "id": "q3_vigilance",
-                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
+                "text": "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo."
               },
               {
                 "id": "q3_melee",
-                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
+                "text": "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física."
               },
               {
                 "id": "q3_agility",
-                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
+                "text": "Sair de última hora para buscar gelo e bebida antes que o mercado feche."
               }
             ]
           }
@@ -245,79 +245,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+            "prompt": "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
             "options": [
               {
                 "id": "q1_logic",
-                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
+                "text": "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular."
               },
               {
                 "id": "q1_ego",
-                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
+                "text": "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar."
               },
               {
                 "id": "q1_agility",
-                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
+                "text": "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro."
               },
               {
                 "id": "q1_melee",
-                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
+                "text": "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
+                "text": "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+            "prompt": "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
             "options": [
               {
                 "id": "q2_vigilance",
-                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
+                "text": "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente."
               },
               {
                 "id": "q2_ego",
-                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
+                "text": "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
+                "text": "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado."
               },
               {
                 "id": "q2_logic",
-                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
+                "text": "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo."
               },
               {
                 "id": "q2_agility",
-                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
+                "text": "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+            "prompt": "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
             "options": [
               {
                 "id": "q3_ego",
-                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
+                "text": "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa."
               },
               {
                 "id": "q3_melee",
-                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
+                "text": "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física."
               },
               {
                 "id": "q3_agility",
-                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
+                "text": "Sair de última hora para buscar gelo e bebida antes que o mercado feche."
               },
               {
                 "id": "q3_logic",
-                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
+                "text": "Fazer a lista do que falta, dividir a conta no final e organizar os horários."
               },
               {
                 "id": "q3_vigilance",
-                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
+                "text": "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo."
               }
             ]
           }
@@ -403,79 +403,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+            "prompt": "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
             "options": [
               {
                 "id": "q1_melee",
-                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
+                "text": "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
+                "text": "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda."
               },
               {
                 "id": "q1_logic",
-                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
+                "text": "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular."
               },
               {
                 "id": "q1_ego",
-                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
+                "text": "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar."
               },
               {
                 "id": "q1_agility",
-                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
+                "text": "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+            "prompt": "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
             "options": [
               {
                 "id": "q2_ego",
-                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
+                "text": "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
+                "text": "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente."
               },
               {
                 "id": "q2_logic",
-                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
+                "text": "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
+                "text": "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado."
               },
               {
                 "id": "q2_agility",
-                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
+                "text": "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+            "prompt": "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
             "options": [
               {
                 "id": "q3_vigilance",
-                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
+                "text": "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo."
               },
               {
                 "id": "q3_melee",
-                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
+                "text": "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física."
               },
               {
                 "id": "q3_ego",
-                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
+                "text": "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa."
               },
               {
                 "id": "q3_logic",
-                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
+                "text": "Fazer a lista do que falta, dividir a conta no final e organizar os horários."
               },
               {
                 "id": "q3_agility",
-                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
+                "text": "Sair de última hora para buscar gelo e bebida antes que o mercado feche."
               }
             ]
           }
@@ -561,79 +561,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+            "prompt": "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
             "options": [
               {
                 "id": "q1_agility",
-                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
+                "text": "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro."
               },
               {
                 "id": "q1_ego",
-                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
+                "text": "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
+                "text": "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda."
               },
               {
                 "id": "q1_logic",
-                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
+                "text": "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular."
               },
               {
                 "id": "q1_melee",
-                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
+                "text": "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+            "prompt": "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
             "options": [
               {
                 "id": "q2_melee",
-                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
+                "text": "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado."
               },
               {
                 "id": "q2_logic",
-                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
+                "text": "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo."
               },
               {
                 "id": "q2_agility",
-                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
+                "text": "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
+                "text": "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente."
               },
               {
                 "id": "q2_ego",
-                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
+                "text": "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+            "prompt": "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
             "options": [
               {
                 "id": "q3_vigilance",
-                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
+                "text": "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo."
               },
               {
                 "id": "q3_logic",
-                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
+                "text": "Fazer a lista do que falta, dividir a conta no final e organizar os horários."
               },
               {
                 "id": "q3_agility",
-                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
+                "text": "Sair de última hora para buscar gelo e bebida antes que o mercado feche."
               },
               {
                 "id": "q3_ego",
-                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
+                "text": "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa."
               },
               {
                 "id": "q3_melee",
-                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
+                "text": "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física."
               }
             ]
           }
@@ -719,79 +719,79 @@
         "questions": [
           {
             "id": "q1",
-            "prompt": "Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?",
+            "prompt": "Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?",
             "options": [
               {
                 "id": "q1_logic",
-                "text": "Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar."
+                "text": "Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular."
               },
               {
                 "id": "q1_vigilance",
-                "text": "Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar."
+                "text": "Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda."
               },
               {
                 "id": "q1_melee",
-                "text": "Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco."
+                "text": "Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas."
               },
               {
                 "id": "q1_agility",
-                "text": "Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão."
+                "text": "Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro."
               },
               {
                 "id": "q1_ego",
-                "text": "Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele."
+                "text": "Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar."
               }
             ]
           },
           {
             "id": "q2",
-            "prompt": "Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?",
+            "prompt": "No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?",
             "options": [
               {
                 "id": "q2_agility",
-                "text": "Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada."
+                "text": "Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez."
               },
               {
                 "id": "q2_ego",
-                "text": "Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa."
+                "text": "Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos."
               },
               {
                 "id": "q2_vigilance",
-                "text": "Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar."
+                "text": "Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente."
               },
               {
                 "id": "q2_logic",
-                "text": "Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar."
+                "text": "Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo."
               },
               {
                 "id": "q2_melee",
-                "text": "Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar."
+                "text": "Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado."
               }
             ]
           },
           {
             "id": "q3",
-            "prompt": "Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?",
+            "prompt": "Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?",
             "options": [
               {
                 "id": "q3_melee",
-                "text": "Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda."
+                "text": "Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física."
               },
               {
                 "id": "q3_logic",
-                "text": "Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam."
+                "text": "Fazer a lista do que falta, dividir a conta no final e organizar os horários."
               },
               {
                 "id": "q3_vigilance",
-                "text": "Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro."
+                "text": "Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo."
               },
               {
                 "id": "q3_agility",
-                "text": "Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal."
+                "text": "Sair de última hora para buscar gelo e bebida antes que o mercado feche."
               },
               {
                 "id": "q3_ego",
-                "text": "Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar."
+                "text": "Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa."
               }
             ]
           }

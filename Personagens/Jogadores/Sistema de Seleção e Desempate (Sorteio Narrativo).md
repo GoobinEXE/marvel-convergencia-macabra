@@ -31,26 +31,26 @@ Este protocolo define **como atribuir as 5 fichas mecânicas** aos personagens c
 
 ## Parte A — Bloco para os Jogadores *(Sem Spoilers)*
 
-### 1. Começa uma discussão feia ou um empurra-empurra na rua ou num bar lotado. O que o seu personagem faz na hora?
-* **A)** Entra na frente para separar ou segurar quem está alterado, mesmo correndo o risco de levar um soco.
-* **B)** Sai do aperto rápido, pega distância e tenta resolver ou chamar ajuda de fora da confusão.
-* **C)** Muda o assunto, inventa uma desculpa convincente ou desconversa até o clima esfriar sem ninguém notar que foi ele.
-* **D)** Observa quem começou, procura a saída mais livre e tenta organizar as pessoas para ninguém se machucar.
-* **E)** Já tinha percebido que ia dar briga minutos antes pelo jeito de alguém na mesa e avisa quem está perto antes do copo voar.
+### 1. Falta energia no prédio ou na rua à noite e você está com amigos ou vizinhos. O que essa pessoa faz primeiro?
+* **A)** Abre o portão pesado da garagem no braço, carrega as compras ou ajuda alguém a subir as escadas.
+* **B)** Desce rápido para pegar velas, busca lanterna no carro e dá uma volta na rua para ver se a luz caiu no quarteirão inteiro.
+* **C)** Puxa conversa no corredor para acalmar quem ficou nervoso e mantém o clima leve até a energia voltar.
+* **D)** Vai direto olhar o quadro de disjuntores, checa o aplicativo da companhia elétrica e organiza quem tem bateria no celular.
+* **E)** Já tinha deixado uma lanterna carregada num lugar fácil e percebe logo pelo movimento do corredor quem precisa de ajuda.
 
-### 2. Olhando para a rotina e o passado dele antes de qualquer coisa estranha acontecer, o que sempre descreveu bem essa pessoa?
-* **A)** Trabalho braçal, academia, luta de fim de semana ou o costume de aguentar peso e cansaço sem reclamar.
-* **B)** Esportes de mira, videogame, dirigir bem no aperto ou sempre dar um jeito ágil de sair de furada.
-* **C)** Guardar segredos, mudar de assunto quando fica desconfortável ou saber ler o humor de qualquer roda de conversa.
-* **D)** Gostar de montar coisas, resolver quebra-cabeças, organizar planilhas ou ter um sonho esquisito que nunca soube explicar.
-* **E)** Ter o sono leve, notar detalhes que ninguém vê na rua ou desconfiar rápido quando algo está fora do lugar.
+### 2. No trabalho, na faculdade ou na rotina da semana, pelo que os conhecidos mais reconhecem essa pessoa?
+* **A)** Por ter disposição física, gostar de academia, esporte de contato ou nunca fugir de serviço pesado.
+* **B)** Por ter ótimo reflexo no trânsito, mandar bem em jogos de mira ou resolver tarefas manuais com rapidez.
+* **C)** Por saber conversar com qualquer pessoa, convencer os outros com facilidade e guardar bem os próprios assuntos.
+* **D)** Por ser organizada, resolver problemas técnicos, montar coisas ou pesquisar assuntos difíceis até entender tudo.
+* **E)** Por reparar em detalhes que passam batido pelos outros, lembrar de fisionomias e notar rápido quando alguém está diferente.
 
-### 3. Numa viagem de carro com amigos em que o pneu fura à noite na estrada, sem sinal de celular, qual função acaba sobrando para ele?
-* **A)** Pegar o macaco, soltar os parafusos duros e fazer a força bruta para trocar a roda.
-* **B)** Correr até um ponto mais alto ou seguro para sinalizar o trânsito e tentar pegar sinal.
-* **C)** Manter o pessoal calmo, puxar conversa para ninguém entrar em pânico ou convencer algum motorista a parar.
-* **D)** Ler o mapa, dividir as tarefas do grupo e calcular quanto tempo e combustível ainda restam.
-* **E)** Ficar de olho no movimento da pista, nos barulhos do mato e em quem está se aproximando no escuro.
+### 3. Num churrasco ou encontro de amigos em que nada foi planejado direito, qual papel acaba caindo no colo dela?
+* **A)** Carregar o cooler cheio, mexer na churrasqueira ou resolver o que precisa de força física.
+* **B)** Sair de última hora para buscar gelo e bebida antes que o mercado feche.
+* **C)** Receber o pessoal, quebrar o gelo entre quem não se conhece e animar a mesa.
+* **D)** Fazer a lista do que falta, dividir a conta no final e organizar os horários.
+* **E)** Lembrar onde cada um deixou a chave ou o celular, ver quando a comida está passando do ponto e notar quem está sem copo.
 
 ### 4. Sincronização de Palavras — Escolha **5 palavras EM ORDEM (`1ª` a `5ª`)**:
 1. `Impacto` | 2. `Precisão` | 3. `Névoa` | 4. `Sonho` | 5. `Instinto` | 6. `Resistência` | 7. `Fuga` | 8. `Segredo` | 9. `Estratégia` | 10. `Presságio` | 11. `Firmeza` | 12. `Reflexo` | 13. `Sussurro` | 14. `Controle` | 15. `Alerta`
