@@ -1,11 +1,11 @@
 # Painel de Controle — Despertar de Poderes (Convergência Macabra)
 
-* **Sessão:** `5ff98a98-6473-46f8-96c5-08e58b81b843`
+* **Sessão:** `f78894d8-f98d-4a7e-83ee-a8c9d6954315`
 * **Modo:** `batch` | **Convergência Concluída:** `NÃO` | **Versão:** `v1`
 * **Progresso:** **0/5** responderam (**5** pendentes) | **Fichas livres no pool:** 5
 * **Sistema de Pontuação:** Determinístico com **4 casas decimais** + desempate por quantidade e ordem das 5 palavras (1ª a 5ª escolha, dentre 15 palavras).
 * **Privacidade:** Códigos individuais protegidos por hash SHA-256 (não listados publicamente).
-* **Última atualização:** `2026-11-21T23:18:42.870Z`
+* **Última atualização:** `2026-11-21T23:19:34.423Z`
 
 ## Status das Vagas (Códigos Ocultos)
 
@@ -25,4 +25,4 @@
 * `vigilance` — Jogador 05 - Genética Alterada (Vigilance - Sentidos e Reflexos)
 
 ## Log de Auditoria (Últimos 10 Eventos)
-* `2026-11-21T23:18:42.870Z` — **SESSION_INIT**: Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256.
+* `2026-11-21T23:19:34.422Z` — **SESSION_INIT**: Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256.

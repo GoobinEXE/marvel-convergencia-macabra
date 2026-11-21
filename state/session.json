@@ -1,5 +1,5 @@
 {
-  "sessionId": "5ff98a98-6473-46f8-96c5-08e58b81b843",
+  "sessionId": "f78894d8-f98d-4a7e-83ee-a8c9d6954315",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
   "maxPlayers": 5,
@@ -16,7 +16,7 @@
     "slot_1": {
       "slotId": "slot_1",
       "slotNumber": 1,
-      "codeHash": "19dc2cd6eaa5ddcec6871a2e62a6b3b9aadde730ea6fec905311129a667d36b7",
+      "codeHash": "2c32741c76141ff475be31f3e1235a286244027ed76a17a23f7c820d8b5a1d26",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -38,7 +38,7 @@
     "slot_2": {
       "slotId": "slot_2",
       "slotNumber": 2,
-      "codeHash": "a8b0a6d9c76978b1480b3b074aeca34cc67e7394c61780e96d58c39e4addd38a",
+      "codeHash": "5ad1bb15d68fb7f7bedf60a22dec8e8def5ac2995362fc126240fbc139f93e44",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -60,7 +60,7 @@
     "slot_3": {
       "slotId": "slot_3",
       "slotNumber": 3,
-      "codeHash": "10eb855169d38a9444bd55af99cad84a018edadae8bd8cb51ac968f7f6838c67",
+      "codeHash": "f92f66cacab8e9f2f552749b9c67659f8e1ab7986030e05e189bad8cfcbe8177",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -82,7 +82,7 @@
     "slot_4": {
       "slotId": "slot_4",
       "slotNumber": 4,
-      "codeHash": "7ad8d0b336e2dcd1affe36f57e3c33a873c98db88015c30db4c5d59284130115",
+      "codeHash": "c1a4003b2f7573d2c42e487e65facf532727061e8aa7255447d815dc24d06c5b",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -104,7 +104,7 @@
     "slot_5": {
       "slotId": "slot_5",
       "slotNumber": 5,
-      "codeHash": "8708ddae93391a0fcebc3559f49993881a12c71c7b45979ed04456404feae181",
+      "codeHash": "1fa2eb8a18fd7710ef2a05a828510a05b89e6efeca5d33ba50c0edfcf27d9253",
       "status": "pending",
       "locked": false,
       "civilIdentity": null,
@@ -126,11 +126,11 @@
   },
   "auditLog": [
     {
-      "at": "2026-11-21T23:18:42.870Z",
+      "at": "2026-11-21T23:19:34.422Z",
       "event": "SESSION_INIT",
       "detail": "Sessão criada no modo 'batch' com 5 vagas protegidas por hash SHA-256."
     }
   ],
-  "createdAt": "2026-11-21T23:18:42.870Z",
-  "updatedAt": "2026-11-21T23:18:42.870Z"
+  "createdAt": "2026-11-21T23:19:34.422Z",
+  "updatedAt": "2026-11-21T23:19:34.423Z"
 }
