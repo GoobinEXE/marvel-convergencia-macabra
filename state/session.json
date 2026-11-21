@@ -4,7 +4,7 @@
   "masterCode": "GM-UUU2UX",
   "mode": "batch",
   "maxPlayers": 5,
-  "version": 2,
+  "version": 3,
   "converged": false,
   "availablePool": [
     "melee",
@@ -67,19 +67,56 @@
     },
     "X616-34MS": {
       "slotCode": "X616-34MS",
-      "status": "pending",
-      "locked": false,
-      "civilIdentity": null,
-      "answers": null,
-      "selectedWordIds": [],
-      "selectedWordLabels": [],
-      "scores": null,
-      "ranking": null,
-      "matchedPairs": [],
+      "status": "submitted",
+      "locked": true,
+      "civilIdentity": {
+        "playerName": "MA",
+        "civilName": "A",
+        "age": "A definir",
+        "occupation": "A definir",
+        "visualAppearance": "A definir",
+        "prePowerHistory": "A definir"
+      },
+      "answers": {
+        "q1": "q1_logic",
+        "q2": "q2_ego",
+        "q3": "q3_logic"
+      },
+      "selectedWordIds": [
+        "w_nevoa",
+        "w_fuga",
+        "w_pressagio",
+        "w_precisao",
+        "w_sonho"
+      ],
+      "selectedWordLabels": [
+        "Névoa",
+        "Fuga",
+        "Presságio",
+        "Precisão",
+        "Sonho"
+      ],
+      "scores": {
+        "melee": 0,
+        "agility": 3,
+        "ego": 4,
+        "logic": 5,
+        "vigilance": 1
+      },
+      "ranking": [
+        "logic",
+        "ego",
+        "agility",
+        "vigilance",
+        "melee"
+      ],
+      "matchedPairs": [
+        "agility"
+      ],
       "assignedArchetypeId": null,
       "assignedAffinityScore": null,
       "isUnexpectedAwakening": false,
-      "submittedAt": null
+      "submittedAt": "2026-11-21T23:06:46.719Z"
     },
     "X616-FZXK": {
       "slotCode": "X616-FZXK",
@@ -140,8 +177,13 @@
       "at": "2026-11-21T23:04:59.675Z",
       "event": "SLOT_SUBMITTED_BATCH",
       "detail": "Slot X616-VQV2 (Marcelo) submetido e travado. Aguardando convergência."
+    },
+    {
+      "at": "2026-11-21T23:06:46.719Z",
+      "event": "SLOT_SUBMITTED_BATCH",
+      "detail": "Slot X616-34MS (MA) submetido e travado. Aguardando convergência."
     }
   ],
   "createdAt": "2026-11-21T21:00:01.384Z",
-  "updatedAt": "2026-11-21T23:04:59.675Z"
+  "updatedAt": "2026-11-21T23:06:46.720Z"
 }
