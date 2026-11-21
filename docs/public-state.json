@@ -2,150 +2,25 @@
   "sessionId": "6c782be9-e1b9-4971-88ab-4d090f9fd6e6",
   "campaignName": "Convergência Macabra",
   "mode": "batch",
-  "version": 1,
+  "version": 2,
   "converged": false,
-  "updatedAt": "2026-11-21T21:00:01.385Z",
+  "updatedAt": "2026-11-21T23:04:59.675Z",
   "summary": {
     "totalSlots": 5,
-    "submittedCount": 0,
-    "pendingCount": 5,
+    "submittedCount": 1,
+    "pendingCount": 4,
     "revealedCount": 0,
     "remainingArchetypesCount": 5
   },
   "slots": {
     "X616-VQV2": {
       "slotCode": "X616-VQV2",
-      "status": "pending",
-      "locked": false,
-      "playerName": null,
-      "civilName": null,
-      "submittedAt": null,
-      "blindQuiz": {
-        "slotCode": "X616-VQV2",
-        "requiredWordCount": 5,
-        "questions": [
-          {
-            "id": "q1",
-            "prompt": "Quando tudo dá errado e o perigo é imediato, qual é o primeiro reflexo do seu personagem?",
-            "options": [
-              {
-                "id": "q1_ego",
-                "text": "Sair do campo de visão, despistar o agressor ou ganhar tempo confundindo a situação."
-              },
-              {
-                "id": "q1_agility",
-                "text": "Ganhar distância, buscar um ângulo seguro e lidar com a ameaça de longe com precisão."
-              },
-              {
-                "id": "q1_melee",
-                "text": "Avançar para proteger quem está perto, firmar o pé e segurar o tranco de frente."
-              },
-              {
-                "id": "q1_vigilance",
-                "text": "Reagir no susto antes mesmo de pensar, guiado por um arrepio ou percepção súbita do ambiente."
-              },
-              {
-                "id": "q1_logic",
-                "text": "Analisar o ambiente com frieza, procurar uma falha no problema e organizar quem está em volta."
-              }
-            ]
-          },
-          {
-            "id": "q2",
-            "prompt": "O que mais marcou a história passada do seu personagem até hoje?",
-            "options": [
-              {
-                "id": "q2_logic",
-                "text": "Estudos intensos, curiosidade fora do comum ou um sonho/evento estranho que nunca soube explicar."
-              },
-              {
-                "id": "q2_melee",
-                "text": "Trabalho pesado, esporte de contato, lutas ou a necessidade constante de aguentar pressão física."
-              },
-              {
-                "id": "q2_ego",
-                "text": "Isolamento, segredos guardados, sensação de não pertencer ou lidar com pessoas difíceis."
-              },
-              {
-                "id": "q2_agility",
-                "text": "Atividades que exigiam mira, coordenação fina, reflexo manual ou a sensação de precisar sempre escapar."
-              },
-              {
-                "id": "q2_vigilance",
-                "text": "Estado constante de alerta, hipervigilância, intuição aguçada ou um susto que mudou seus sentidos."
-              }
-            ]
-          },
-          {
-            "id": "q3",
-            "prompt": "Em um grupo tentando sobreviver a uma crise, qual papel combina mais com a personalidade dele?",
-            "options": [
-              {
-                "id": "q3_agility",
-                "text": "O especialista ágil que resolve alvos difíceis sem se expor."
-              },
-              {
-                "id": "q3_ego",
-                "text": "O infiltrador ou distraidor que controla o que os outros percebem."
-              },
-              {
-                "id": "q3_melee",
-                "text": "O escudo da linha de frente que não recua."
-              },
-              {
-                "id": "q3_vigilance",
-                "text": "O batedor/sentinela que percebe ameaças escondidas antes de todo mundo."
-              },
-              {
-                "id": "q3_logic",
-                "text": "O estrategista que monta o plano e protege os companheiros."
-              }
-            ]
-          }
-        ],
-        "words": [
-          {
-            "id": "w_resistencia",
-            "label": "Resistência"
-          },
-          {
-            "id": "w_precisao",
-            "label": "Precisão"
-          },
-          {
-            "id": "w_segredo",
-            "label": "Segredo"
-          },
-          {
-            "id": "w_nevoa",
-            "label": "Névoa"
-          },
-          {
-            "id": "w_fuga",
-            "label": "Fuga"
-          },
-          {
-            "id": "w_pressagio",
-            "label": "Presságio"
-          },
-          {
-            "id": "w_sonho",
-            "label": "Sonho"
-          },
-          {
-            "id": "w_estrategia",
-            "label": "Estratégia"
-          },
-          {
-            "id": "w_instinto",
-            "label": "Instinto"
-          },
-          {
-            "id": "w_impacto",
-            "label": "Impacto"
-          }
-        ]
-      },
+      "status": "submitted",
+      "locked": true,
+      "playerName": "Marcelo",
+      "civilName": "Cleiton",
+      "submittedAt": "2026-11-21T23:04:59.675Z",
+      "blindQuiz": null,
       "result": null
     },
     "X616-34MS": {
